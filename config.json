@@ -73,14 +73,6 @@
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/categories/art.png"
     },
     {
-      "name": "models",
-      "title": {
-        "en": "Remodeling",
-        "ru": "Ремоделинг",
-        "uk": "Ремоделінг"
-      }
-    },
-    {
       "name": "other",
       "title": {
         "en": "Other",
