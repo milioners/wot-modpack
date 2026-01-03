@@ -109,6 +109,15 @@
         }
     ],
     "mods": [
+
+		{
+			"id": "crosshair_api",
+			"files": [{
+				"url": "https://github.com/SuperZombi/wot-modpack/raw/refs/heads/mods/mods/crosshair/crosshairs_api.wotmod",
+				"dest": "mods"
+			}],
+			"ver": "1.1"
+		},
         {
 			"id": "crosshair.white",
 			"files": [
