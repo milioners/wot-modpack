@@ -110,17 +110,32 @@
     ],
     "mods": [
         {
-            "id": "modslistapi",
-            "files": [
-                {
-                    "url": "https://github.com/milioners/wot-modpack/tree/main/mods/me.poliroid.modslistapi.wotmod",
-                    "dest": "mods"
-                }
-            ],
-            "requires": [
-                "net.openwg.gameface"
-            ],
-            "ver": "1.7.7"
-        }
+			"id": "crosshair.white",
+			"files": [
+				{
+					"url": "https://github.com/milioners/wot-modpack/raw/refs/heads/main/mods/crosshair/white/crosshair_Controls.wotmod",
+					"dest": "mods"
+				},
+				{
+					"url": "https://github.com/milioners/wot-modpack/raw/refs/heads/main/mods/crosshair/white/crosshair_arcade.wotmod",
+					"dest": "mods"
+				},
+				{
+					"url": "https://github.com/milioners/wot-modpack/raw/refs/heads/main/mods/crosshair/white/crosshair_sniper.wotmod",
+					"dest": "mods"
+				},
+			],
+			"image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/mods/images/crosshair/white.jpg",
+			"title": {
+				"en": "White crosshair",
+				"ru": "Белый прицел",
+				"uk": "Білий приціл",
+			},
+			"category": "aim",
+			"group": "crosshair",
+			"ver": "1",
+			"requires": ["crosshair_api"]
+		},
+
     ]
 }
