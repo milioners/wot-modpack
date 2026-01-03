@@ -7,7 +7,7 @@
                 "ru": "Прицел",
                 "uk": "Приціл"
             },
-            "image": "https://raw.githubusercontent.com/SuperZombi/wot-modpack/refs/heads/mods/images/categories/aim.png"
+            "image": "https://raw.githubusercontent.com/milioners/wot-modpack/refs/heads/main/mods/images/categories/aim.png"
         }
     ],
     "groups": [
@@ -113,7 +113,7 @@
             "id": "modslistapi",
             "files": [
                 {
-                    "url": "https://github.com/SuperZombi/wot-modpack/raw/refs/heads/mods/mods/me.poliroid.modslistapi.wotmod",
+                    "url": "https://github.com/milioners/wot-modpack/tree/main/mods/me.poliroid.modslistapi.wotmod",
                     "dest": "mods"
                 }
             ],
