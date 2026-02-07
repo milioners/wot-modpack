@@ -6,6 +6,7 @@
         "en": "Aim",
         "ru": "Прицел",
         "uk": "Приціл"
+      "subcategories": ["Сетка", "Информация", "Сведение"]
       },
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/categories/aim.png"
     },
