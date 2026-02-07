@@ -30,6 +30,12 @@
       "title": { "ru": "Статистика", "en": "Statistics" },
       "icon": "▦",
       "subcategories": ["Статистика в ангаре", "Статистика и маркеры в бою"]
+    },
+    {
+      "name": "sounds",
+      "title": { "ru": "Звуки и озвучка", "en": "Sounds & voice" },
+      "icon": "♪",
+      "subcategories": ["Озвучка экипажа", "Звуки в бою"]
     }
   ],
   "mods": [
@@ -177,6 +183,24 @@
       "category": "Статистика и маркеры в бою",
       "author": "XVM Team",
       "image": "images/xvm.jpg",
+      "files": []
+    },
+    {
+      "id": "crew-voice",
+      "title": { "ru": "Озвучка экипажа", "en": "Crew voiceover" },
+      "description": { "ru": "Замена голосов экипажа: команды, реплики в бою. Можно добавить свой пакет озвучки через папку на GitHub.", "en": "Replace crew voices: commands, battle lines. Add your voice pack via GitHub folder." },
+      "category": "Озвучка экипажа",
+      "author": "—",
+      "image": "images/placeholder.svg",
+      "files": []
+    },
+    {
+      "id": "battle-sounds",
+      "title": { "ru": "Звуки в бою", "en": "Battle sounds" },
+      "description": { "ru": "Замена звуков выстрелов, двигателей, взрывов, окружения. Добавьте мод с папкой на GitHub (folderUrl).", "en": "Replace gun, engine, explosion, ambient sounds. Add mod with folderUrl on GitHub." },
+      "category": "Звуки в бою",
+      "author": "—",
+      "image": "images/placeholder.svg",
       "files": []
     }
   ]
