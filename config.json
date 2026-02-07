@@ -82,6 +82,19 @@
       ]
     },
     {
+      "id": "white-crosshair-full",
+      "title": { "ru": "Белый прицел (целый)", "en": "White crosshair (full)" },
+      "description": { "ru": "Полный набор белого прицела: аркадный, снайперский и сведение в одном моде. Установите один раз — все три режима.", "en": "Full white crosshair pack: arcade, sniper and convergence in one mod." },
+      "category": "Целый прицел",
+      "author": "Various",
+      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/white.jpg",
+      "files": [
+        { "url": "mods/crosshair/white/crosshair_arcade.wotmod", "dest": "mods", "folder": "" },
+        { "url": "mods/crosshair/white/crosshair_sniper.wotmod", "dest": "mods", "folder": "" },
+        { "url": "mods/crosshair/white/crosshair_Controls.wotmod", "dest": "mods", "folder": "" }
+      ]
+    },
+    {
       "id": "jimbos-crosshair",
       "title": { "ru": "Прицел Jimbo", "en": "Jimbo's Crosshair" },
       "description": { "ru": "Улучшенный прицел с сеткой и индикатором сведения.", "en": "Crosshair with aim indicator." },
