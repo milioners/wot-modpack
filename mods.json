@@ -1,0 +1,122 @@
+[
+  {
+    "id": "xvm",
+    "name": "XVM",
+    "shortName": "XVM",
+    "description": "Расширенная статистика в ангаре и в бою: рейтинг WN8, проценты побед, маркеры над танками.",
+    "image": "images/xvm.jpg",
+    "category": "Статистика и маркеры",
+    "author": "XVM Team",
+    "downloadUrl": "mods/xvm.zip"
+  },
+  {
+    "id": "jimbos-crosshair",
+    "name": "Jimbo's Crosshair Mod",
+    "shortName": "Прицел Jimbo",
+    "description": "Улучшенный прицел с сеткой и индикатором сведения.",
+    "image": "images/jimbo.jpg",
+    "category": "Прицелы",
+    "author": "Jimbo",
+    "downloadUrl": "mods/jimbos-crosshair.zip"
+  },
+  {
+    "id": "melty-math-mod",
+    "name": "MeltyMath Mod",
+    "shortName": "MeltyMath",
+    "description": "Мод отображения математики в бою: расчёт рикошета и пробития.",
+    "image": "images/melty.jpg",
+    "category": "Прицелы и расчёты",
+    "author": "MeltyMap",
+    "downloadUrl": "mods/melty-math.zip"
+  },
+  {
+    "id": "battle-messenger",
+    "name": "Battle Messenger",
+    "shortName": "Battle Messenger",
+    "description": "Расширенный чат в бою: быстрые сообщения и макросы.",
+    "image": "images/messenger.jpg",
+    "category": "Интерфейс",
+    "author": "Community",
+    "downloadUrl": "mods/battle-messenger.zip"
+  },
+  {
+    "id": "session-stats",
+    "name": "Session Statistics",
+    "shortName": "Статистика сессии",
+    "description": "Статистика за текущую игровую сессию.",
+    "image": "images/session.jpg",
+    "category": "Статистика",
+    "author": "Various",
+    "downloadUrl": "mods/session-stats.zip"
+  },
+  {
+    "id": "hangar-mod",
+    "name": "Мод ангара",
+    "shortName": "Ангар",
+    "description": "Изменение внешнего вида ангара: темы и фон.",
+    "image": "images/hangar.jpg",
+    "category": "Ангар",
+    "author": "Various",
+    "downloadUrl": "mods/hangar.zip"
+  },
+  {
+    "id": "sound-mod",
+    "name": "Звуковые моды",
+    "shortName": "Звук",
+    "description": "Замена звуков выстрелов и двигателей.",
+    "image": "images/sound.jpg",
+    "category": "Звук",
+    "author": "Various",
+    "downloadUrl": "mods/sound.zip"
+  },
+  {
+    "id": "camera-mod",
+    "name": "Моды камеры",
+    "shortName": "Камера",
+    "description": "Расширенные настройки камеры.",
+    "image": "images/camera.jpg",
+    "category": "Камера",
+    "author": "Various",
+    "downloadUrl": "mods/camera.zip"
+  },
+  {
+    "id": "contour-icons",
+    "name": "Контурные иконки танков",
+    "shortName": "Иконки",
+    "description": "Иконки танков на миникарте и над техникой.",
+    "image": "images/icons.jpg",
+    "category": "Интерфейс",
+    "author": "Various",
+    "downloadUrl": "mods/contour-icons.zip"
+  },
+  {
+    "id": "damage-log",
+    "name": "Лог урона",
+    "shortName": "Лог урона",
+    "description": "Детальный лог нанесённого и полученного урона.",
+    "image": "images/damagelog.jpg",
+    "category": "Статистика",
+    "author": "Various",
+    "downloadUrl": "mods/damage-log.zip"
+  },
+  {
+    "id": "sixth-sense-icon",
+    "name": "Иконка «Шестое чувство»",
+    "shortName": "Шестое чувство",
+    "description": "Замена лампочки засвета на заметную иконку.",
+    "image": "images/sixth.jpg",
+    "category": "Интерфейс",
+    "author": "Various",
+    "downloadUrl": "mods/sixth-sense.zip"
+  },
+  {
+    "id": "safe-shot",
+    "name": "Safe Shot",
+    "shortName": "Safe Shot",
+    "description": "Блокировка выстрела при прицеливании в союзника.",
+    "image": "images/safeshot.jpg",
+    "category": "Геймплей",
+    "author": "Various",
+    "downloadUrl": "mods/safe-shot.zip"
+  }
+]
