@@ -50,9 +50,7 @@
       "author": "Various",
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/white.jpg",
       "files": [
-        { "url": "mods/crosshair/white/crosshair_Controls.wotmod", "dest": "mods", "folder": "" },
-        { "url": "mods/crosshair/white/crosshair_arcade.wotmod", "dest": "mods", "folder": "" },
-        { "url": "mods/crosshair/white/crosshair_sniper.wotmod", "dest": "mods", "folder": "" }
+        { "folderUrl": "mods/crosshair/white", "dest": "mods", "folder": "" }
       ]
     },
     {
