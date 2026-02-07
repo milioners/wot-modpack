@@ -140,7 +140,7 @@
     },
 	{
       "id": "Castiel-crosshair-full",
-      "title": { "ru": "Castiel прицел (целый)", "en": "White crosshair (full)" },
+      "title": { "ru": "Castiel прицел (целый)" },
       "description": { "ru": "Полный набор Castiel прицела: аркадный, снайперский, САУ, Штурм САУ и сведение в одном моде. Установите один раз — все.", "en": "Full white crosshair pack: arcade, sniper and convergence in one mod." },
       "category": "Целый прицел",
       "author": "Andre_V",
