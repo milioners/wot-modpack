@@ -43,6 +43,19 @@
       "files": []
     },
     {
+      "id": "white-crosshair",
+      "title": { "ru": "Белый прицел", "en": "White crosshair" },
+      "description": { "ru": "Минималистичный прицел с белым перекрестием. Аркадный, снайперский и управление. Хорошо виден на любом фоне.", "en": "Minimalistic white crosshair — arcade, sniper, controls. Visible on any background." },
+      "category": "Сетка",
+      "author": "Various",
+      "image": "images/white-crosshair.jpg",
+      "files": [
+        { "url": "mods/crosshair/white/crosshair_Controls.wotmod", "dest": "mods", "folder": "" },
+        { "url": "mods/crosshair/white/crosshair_arcade.wotmod", "dest": "mods", "folder": "" },
+        { "url": "mods/crosshair/white/crosshair_sniper.wotmod", "dest": "mods", "folder": "" }
+      ]
+    },
+    {
       "id": "jimbos-crosshair",
       "title": { "ru": "Прицел Jimbo", "en": "Jimbo's Crosshair" },
       "description": { "ru": "Улучшенный прицел с сеткой и индикатором сведения.", "en": "Crosshair with aim indicator." },
@@ -57,7 +70,7 @@
       "description": { "ru": "Дополнительная сетка на прицеле для точного наведения.", "en": "Aim grid overlay." },
       "category": "Сетка",
       "author": "Various",
-      "image": "images/placeholder.jpg",
+      "image": "images/placeholder.svg",
       "files": []
     },
     {
@@ -66,7 +79,7 @@
       "description": { "ru": "Время до сведения, дистанция, угол брони в прицеле.", "en": "Aim time, distance, armor angle." },
       "category": "Информация",
       "author": "Various",
-      "image": "images/placeholder.jpg",
+      "image": "images/placeholder.svg",
       "files": []
     },
     {
@@ -75,7 +88,7 @@
       "description": { "ru": "Отображение готовности орудия к выстрелу.", "en": "Gun convergence indicator." },
       "category": "Сведение",
       "author": "Various",
-      "image": "images/placeholder.jpg",
+      "image": "images/placeholder.svg",
       "files": []
     },
     {
