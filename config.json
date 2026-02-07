@@ -72,7 +72,7 @@
     },
     {
       "id": "white-crosshair",
-      "title": { "ru": "Сведение Белый прицел", "en": "White crosshair" },
+      "title": { "ru": "Сведение Белый прицел", "en": "Convergence White crosshair" },
       "description": { "ru": "Минималистичный прицел с белым перекрестием. Аркадный, снайперский и управление. Хорошо виден на любом фоне.", "en": "Minimalistic white crosshair — arcade, sniper, controls. Visible on any background." },
       "category": "Сведение",
       "author": "Various",
