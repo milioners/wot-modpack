@@ -146,22 +146,11 @@
       "author": "Andre_V",
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/Castiel/crosshair_arcade.jpg",
       "files": [
-        { "url": "mods/crosshair/Castiel/crosshair_arcade.wotmod", "dest": "mods", "folder": "" },
-        { "url": "mods/crosshair/Castiel/crosshair_sniper.wotmod", "dest": "mods", "folder": "" },
-        { "url": "mods/crosshair/Castiel/crosshair_Controls.wotmod", "dest": "mods", "folder": "" },
-		{ "url": "mods/crosshair/Castiel/crosshair_strategic.wotmod", "dest": "mods", "folder": "" },
-		{ "url": "mods/crosshair/Castiel/assaultCrosshair.wotmod", "dest": "mods", "folder": "" }
+        { "folderUrl": "mods/crosshair/Castiel", "dest": "mods", "folder": "" }
+
       ]
     },
-    {
-      "id": "jimbos-crosshair",
-      "title": { "ru": "Прицел Jimbo", "en": "Jimbo's Crosshair" },
-      "description": { "ru": "Улучшенный прицел с сеткой и индикатором сведения.", "en": "Crosshair with aim indicator." },
-      "category": "Сетка",
-      "author": "Jimbo",
-      "image": "images/jimbo.jpg",
-      "files": []
-    },
+    
     {
       "id": "crosshair-grid",
       "title": { "ru": "Сетка прицела", "en": "Crosshair grid" },
