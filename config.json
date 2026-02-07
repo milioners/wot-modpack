@@ -48,7 +48,7 @@
       "description": { "ru": "Минималистичный прицел с белым перекрестием. Аркадный, снайперский и управление. Хорошо виден на любом фоне.", "en": "Minimalistic white crosshair — arcade, sniper, controls. Visible on any background." },
       "category": "Сетка",
       "author": "Various",
-      "image": "images/white-crosshair.jpg",
+      "image": "images/crosshair/white.jpg",
       "files": [
         { "url": "mods/crosshair/white/crosshair_Controls.wotmod", "dest": "mods", "folder": "" },
         { "url": "mods/crosshair/white/crosshair_arcade.wotmod", "dest": "mods", "folder": "" },
