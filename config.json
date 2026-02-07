@@ -50,7 +50,7 @@
     },
     {
       "id": "white-crosshair",
-      "title": { "ru": "Аркадный <Белый прицел>", "en": "White crosshair" },
+      "title": { "ru": "Аркадный ^Белый прицел^", "en": "White crosshair" },
       "description": { "ru": "Минималистичный прицел с белым перекрестием. Аркадный, снайперский и управление. Хорошо виден на любом фоне.", "en": "Minimalistic white crosshair — arcade, sniper, controls. Visible on any background." },
       "category": "Аркадный",
       "author": "Various",
@@ -61,7 +61,7 @@
     },
     {
       "id": "white-crosshair",
-      "title": { "ru": "Снайперский <Белый прицел>", "en": "White crosshair" },
+      "title": { "ru": "Снайперский ^Белый прицел^", "en": "White crosshair" },
       "description": { "ru": "Минималистичный прицел с белым перекрестием. Аркадный, снайперский и управление. Хорошо виден на любом фоне.", "en": "Minimalistic white crosshair — arcade, sniper, controls. Visible on any background." },
       "category": "Снайперский",
       "author": "Various",
@@ -72,7 +72,7 @@
     },
     {
       "id": "white-crosshair",
-      "title": { "ru": "Сведение <Белый прицел>", "en": "White crosshair" },
+      "title": { "ru": "Сведение ^Белый прицел^", "en": "White crosshair" },
       "description": { "ru": "Минималистичный прицел с белым перекрестием. Аркадный, снайперский и управление. Хорошо виден на любом фоне.", "en": "Minimalistic white crosshair — arcade, sniper, controls. Visible on any background." },
       "category": "Сведение",
       "author": "Various",
