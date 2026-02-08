@@ -148,7 +148,7 @@
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/damagpanel/Playstation/Version.1.jpg",
       "files": [
         { "url": "mods/damagpanel/Playstation/damagePanel.mtmod", "dest": "mods", "folder": "" },
-        { "folderUrl": "mods/damagpanel/configs", "dest": "mods", "folder": "" }
+        { "folderUrl": "mods/damagpanel/configs", "dest": "mods", "folder": "configs" }
       ]
     },
 	{
@@ -161,7 +161,7 @@
       "files": [
         { "url": "mods/damagpanel/DamagPanelUGN/damagePanel.mtmod", "dest": "mods", "folder": "" },
 		{ "url": "mods/damagpanel/DamagPanelUGN/phantasm.damage_log.mtmod", "dest": "mods", "folder": "" },
-        { "folderUrl": "mods/damagpanel/configs", "dest": "mods", "folder": "" }
+        { "folderUrl": "mods/damagpanel/configs", "dest": "mods", "folder": "configs" }
       ]
     },
     {
