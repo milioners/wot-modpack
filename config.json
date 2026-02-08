@@ -40,15 +40,6 @@
   ],
   "mods": [
     {
-      "id": "hangar-mod",
-      "title": { "ru": "Мод ангара", "en": "Hangar mod" },
-      "description": { "ru": "Изменение внешнего вида ангара: темы, фон, расположение элементов." },
-      "category": "hangar",
-      "author": "Various",
-      "image": "images/hangar.jpg",
-      "files": []
-    },
-    {
       "id": "white-crosshair",
       "title": { "ru": "Аркадный Белый", "en": "White crosshair" },
       "description": { "ru": "Прицел с белым перекрестием. Аркадный. Хорошо виден на любом фоне." },
@@ -150,13 +141,13 @@
     },
     
     {
-      "id": "crosshair-grid",
-      "title": { "ru": "Сетка прицела", "en": "Crosshair grid" },
-      "description": { "ru": "Дополнительная сетка на прицеле для точного наведения.", "en": "Aim grid overlay." },
-      "category": "Сетка",
-      "author": "Various",
-      "image": "images/placeholder.svg",
-      "files": []
+      "id": "DamagePanel",
+      "title": { "ru": "Панель повреждений Playstation" },
+      "description": { "ru": "Панель повреждений c Playstation." },
+      "category": "Панель повреждений",
+      "author": "Andre_V\Ekspoint",
+      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/damagpanel/Playstation/Version.1.jpg",
+      "files": ["url": "mods/damagpanel/Playstation/damagePanel.mtmod", "dest": "mods", "folder": ""]
     },
     {
       "id": "aim-info",
