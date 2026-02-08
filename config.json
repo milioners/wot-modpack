@@ -145,9 +145,9 @@
       "description": { "ru": "Панель повреждений c Playstation." },
       "category": "Панель повреждений",
       "author": "Andre_V",
-      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/Castiel/assaultCrosshair.jpg",
+      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/damagpanel/Playstation/Version.1.jpg",
       "files": [
-        { "url": "mods/crosshair/Castiel/assaultCrosshair.wotmod", "dest": "mods", "folder": "" }
+        { "url": "mods/damagpanel/Playstation/damagePanel.mtmod", "dest": "mods", "folder": "" }
       ]
     },
     {
