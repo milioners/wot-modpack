@@ -39,9 +39,20 @@
     }
   ],
   "mods": [
+	{
+      "id": "hanger-menager",
+      "title": { "ru": "Менеджер Ангаров" },
+      "description": { "ru": "Мод смены ангаров Менеджер Ангаров." },
+      "category": "Ангар",
+      "author": "phantasm",
+      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/hanger/MenagerHanger/hangarmenage.jpg",
+      "files": [
+        { "folderUrl": "mods/hanger/MenagerHanger", "dest": "mods", "folder": "" }
+      ]
+    },
     {
       "id": "white-crosshair",
-      "title": { "ru": "Аркадный Белый", "en": "White crosshair" },
+      "title": { "ru": "Аркадный Белый" },
       "description": { "ru": "Прицел с белым перекрестием. Аркадный. Хорошо виден на любом фоне." },
       "category": "Аркадный",
       "author": "Various",
@@ -52,7 +63,7 @@
     },
     {
       "id": "white-crosshair",
-      "title": { "ru": "Снайперский Белый", "en": "White crosshair" },
+      "title": { "ru": "Снайперский Белый" },
       "description": { "ru": "Прицел с белым перекрестием. Снайперский. Хорошо виден на любом фоне." },
       "category": "Снайперский",
       "author": "Various",
@@ -63,7 +74,7 @@
     },
     {
       "id": "white-crosshair",
-      "title": { "ru": "Сведение Белое", "en": "Convergence White crosshair" },
+      "title": { "ru": "Сведение Белое" },
       "description": { "ru": "Прицел с белым перекрестием. Хорошо виден на любом фоне." },
       "category": "Сведение",
       "author": "Various",
@@ -74,7 +85,7 @@
     },
     {
       "id": "white-crosshair-full",
-      "title": { "ru": "Белый прицел (целый)", "en": "White crosshair (full)" },
+      "title": { "ru": "Белый прицел (целый)" },
       "description": { "ru": "Полный набор белого прицела: аркадный, снайперский и сведение в одном моде. Установите один раз — все."},
       "category": "Целый прицел",
       "author": "Various",
