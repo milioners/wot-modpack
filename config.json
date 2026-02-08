@@ -263,7 +263,7 @@
       "author": "Various",
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/six_sense/stat/v1.png",
       "files": [
-        { "folderUrl": "mods/six_sense/stat/v.1/mods", "dest": "mods", "folder": "" }
+        { "folderUrl": "mods/six_sense/stat/v.1", "dest": "mods", "folder": "" }
       ]
     },
 	{
