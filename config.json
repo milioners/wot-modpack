@@ -145,7 +145,7 @@
       "title": { "ru": "Панель повреждений Playstation" },
       "description": { "ru": "Панель повреждений c Playstation." },
       "category": "Панель повреждений",
-      "author": "Andre_V\Ekspoint",
+      "author": "Andre_V",
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/damagpanel/Playstation/Version.1.jpg",
       "files": ["url": "mods/damagpanel/Playstation/damagePanel.mtmod", "dest": "mods", "folder": ""]
     },
