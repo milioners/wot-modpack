@@ -309,7 +309,7 @@
       "files": [
         { "folderUrl": "mods/six_sense/stat/v.5/mods", "dest": "mods", "folder": "" }
       ]
-    }
+    },
     {
       "id": "contour-icons",
       "title": { "ru": "Контурные иконки танков", "en": "Contour icons" },
