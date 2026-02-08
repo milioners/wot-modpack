@@ -49,7 +49,7 @@
       "id": "hanger-menager",
       "title": { "ru": "Менеджер Ангаров" },
       "description": { "ru": "Мод смены ангаров Менеджер Ангаров." },
-      "category": "hangar",
+      "category": "Ангар",
       "author": "phantasm",
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/hanger/MenagerHanger/hangarmenage.jpg",
       "files": [
@@ -60,7 +60,7 @@
       "id": "hanger-mini",
       "title": { "ru": "Менеджер Ангаров" },
       "description": { "ru": "Мод смены ангаров Менеджер Ангаров." },
-      "category": "hangar",
+      "category": "Ангар",
       "author": "phantasm",
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/hanger/MinimalHanger/minihanger.jpg",
       "files": [
