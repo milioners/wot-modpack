@@ -277,6 +277,39 @@
         { "folderUrl": "mods/six_sense/stat/v.2/mods", "dest": "mods", "folder": "" }
       ]
     },
+	{
+      "id": "NaborLamp-sixth-sense-icon-v3",
+      "title": { "ru": "Иконка «Шестое чувство» V3", "en": "Sixth sense icon" },
+      "description": { "ru": "Замена лампочки засвета на более заметную иконку." },
+      "category": "Статические",
+      "author": "Various",
+      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/six_sense/stat/v3.png",
+      "files": [
+        { "folderUrl": "mods/six_sense/stat/v.3/mods", "dest": "mods", "folder": "" }
+      ]
+    }
+	{
+      "id": "NaborLamp-sixth-sense-icon-v4",
+      "title": { "ru": "Иконка «Шестое чувство» V4", "en": "Sixth sense icon" },
+      "description": { "ru": "Замена лампочки засвета на более заметную иконку." },
+      "category": "Статические",
+      "author": "Various",
+      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/six_sense/stat/v4.png",
+      "files": [
+        { "folderUrl": "mods/six_sense/stat/v.4/mods", "dest": "mods", "folder": "" }
+      ]
+    }
+	{
+      "id": "NaborLamp-sixth-sense-icon-v5",
+      "title": { "ru": "Иконка «Шестое чувство» V5", "en": "Sixth sense icon" },
+      "description": { "ru": "Замена лампочки засвета на более заметную иконку." },
+      "category": "Статические",
+      "author": "Various",
+      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/six_sense/stat/v5.png",
+      "files": [
+        { "folderUrl": "mods/six_sense/stat/v.5/mods", "dest": "mods", "folder": "" }
+      ]
+    }
     {
       "id": "contour-icons",
       "title": { "ru": "Контурные иконки танков", "en": "Contour icons" },
