@@ -1,0 +1,97 @@
+/**
+	Включение:  true
+    Выключение: false
+**/
+{
+	"Icon": {
+	    "enabled": true,	
+		"time": 10,   // время показа, в секундах
+		"x": 0,       // координаты по горизонту
+        "y": 160,      // координаты по вертикале
+		"width": 194,     // ширина изображения
+		"height": 210,    // высота изображения
+		"alignY": "top",    // вертикальное выравнивания   [top, center, bottom]
+		"alignX": "center", // горизонтальное выравнивание [left, center, right]
+		"centerX": true, // выравнивание изображения по центру к позиции X
+		"image": "../../mods/configs/ekspoint/SixthSenseSoundTimeIconChat/SixthSenseIcon.png" // путь к изображению 
+	},
+	"Sound": {
+		"enabled": false,
+		"sounds": "Lampa" // Id звука для шестого чувства (из gui_sounds.xml). Формат: /файл/группа/звук	
+	},
+	"TimeText": {
+	    "enabled": true,
+		"time": 10, // время отсчета, в секундах
+	    "background": {
+		    "enable": false,
+			"x": 165,     // координаты по горизонту
+            "y": -8,      // координаты по вертикале
+            "alpha": 50,  // яркость
+            "height": 55, // высота изображения
+            "image": "gui/maps/bg.png",
+            "width": 200  // ширина изображения
+        },
+		"shadow": {
+		    "enable": true,
+            "alpha": 100, 
+            "angle": 90,
+            "color": "#000000",
+            "distance": 0,
+            "size": 2,
+            "strength": 200
+        },
+		"text": {
+		    "enabled": true,
+            "alignX": "center", // горизонтальное выравнивание [left, center, right]
+            "alignY": "top",    // вертикальное выравнивания   [top, center, bottom]
+            "alpha": 100,       // яркость текста
+			"centerX": true, // выравнивание текста по центру к позиции X
+            "format": "<font color='#ffffff' size='16' face='$FieldFont'>Свечусь еще {time} сек</font>", // текст
+			"height": 40,
+            "width": 130,
+            "x": 0,  // координаты по горизонту
+            "y": 150    // координаты по вертикале
+        }
+	},
+	"Chat": {
+	    "enabled": true,
+		"ignoreBattleTypes": [18], // Ограничение для опеределенных типов боев
+		"vehicleTypes": ["lightTank", "SPG", "AT-SPG", "mediumTank", "heavyTank"], // Включение для определенных типов техники
+		"showWhenLess": false, // Опция для остальных боев showWhenLessInBattle
+		"useSquadChat": false, // Использвать чат взвода, если он найден
+		"forceShowIfSPG": 2, // Опция принудительного сообщения о засвете для артиллерии, независимо от параметров helpMeMessage, cellClickMinimap и useSquadChat // 0 - данный параметр игнорируеся, 1 - будет принудительная отправка сообщения "Нужна помощь", независимо от параметра helpMeOption и useSquadChat, 2 - будет принудительное прокликивание, независимо от параметра cellClickOption и useSquadChat
+		"showWhenLessInBattle": 6, // Показывать сообщения только при условии, если количество живых союзников достигло необходимого количества
+		"helpMeMessage": true, // Опция отображения сообщения "Нужна помощь"
+		"cellClickMinimap": true, // Опция прокликивания по миникарте
+		"messages": "Я засветился в квадрате {cell}!!" // Сообщение, которое появляется в тимчате при засвете
+	}		
+}
+/** 
+Типы боев:
+    0   Специальный   
+    1   Рандом   
+    2   Тренировочный   
+    3   Ротный   
+    4   Турнир   
+    5   Клановый   
+    6   Обучающий   
+    7   Командный   
+    8   Исторический   
+    9   Бой до последнего   
+    10  Укрепрайон, вылазка   
+    11  Битва за укрепрайон   
+    12  Ладдер   
+    13  Глобальная карта   
+    14  TOURNAMENT_REGULAR   
+    15  TOURNAMENT_CLAN   
+    16  Учебный   
+    17  Учебный   
+    18  Бой до последнего
+    19  Бой до последнего - командный
+Типы техники:
+    SPG - арта
+	AT-SPG - пт-сау
+	lightTank - легкий танк 
+	mediumTank - средний танк
+	heavyTank - тяжелый танк
+**/
