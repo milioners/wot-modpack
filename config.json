@@ -295,7 +295,7 @@
 	"predefinedSets": [
 		{ "id": "no-fps-drop", "name": "Без просадки FPS", "modIds": [] },
 		{ "id": "minimal", "name": "Минимальный", "modIds": [] },
-		{ "id": "artem9799", "name": "Выбор Артема9799", "modIds": ["NaborLamp-sixth-sense-icon-v2","DamagePanel-UGN","Castiel-crosshair-full","","","",""] }
+		{ "id": "artem9799", "name": "Выбор Артема9799", "modIds": ["NaborLamp-sixth-sense-icon-v2","DamagePanel-UGN","Castiel-crosshair-full","hanger-menager"] }
 	]
   ]
 }
