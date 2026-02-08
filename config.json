@@ -163,7 +163,7 @@
 		{ "url": "mods/damagpanel/DamagPanelUGN/phantasm.damage_log.mtmod", "dest": "mods", "folder": "" },
         { "folderUrl": "mods/damagpanel/configs", "dest": "mods", "folder": "" }
       ]
-    }
+    },
     {
       "id": "aim-info",
       "title": { "ru": "Информация при прицеливании", "en": "Aim info" },
