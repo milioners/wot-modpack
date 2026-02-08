@@ -58,8 +58,8 @@
     },
     {
       "id": "hanger-mini",
-      "title": { "ru": "Менеджер Ангаров" },
-      "description": { "ru": "Мод смены ангаров Менеджер Ангаров." },
+      "title": { "ru": "Минималистичный ангар PROTанки" },
+      "description": { "ru": "Минималистичный ангар PROTанки." },
       "category": "Ангар",
       "author": "phantasm",
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/hanger/MinimalHanger/minihanger.jpg",
@@ -68,7 +68,7 @@
       ]
     },
     {
-      "id": "white-crosshair",
+      "id": "white-crosshair-arkada",
       "title": { "ru": "Аркадный Белый", "en": "White crosshair" },
       "description": { "ru": "Прицел с белым перекрестием. Аркадный. Хорошо виден на любом фоне." },
       "category": "Аркадный",
@@ -79,7 +79,7 @@
       ]
     },
     {
-      "id": "white-crosshair",
+      "id": "white-crosshair-sniper",
       "title": { "ru": "Снайперский Белый", "en": "White crosshair" },
       "description": { "ru": "Прицел с белым перекрестием. Снайперский. Хорошо виден на любом фоне." },
       "category": "Снайперский",
@@ -90,7 +90,7 @@
       ]
     },
     {
-      "id": "white-crosshair",
+      "id": "white-crosshair-svedenie",
       "title": { "ru": "Сведение Белое", "en": "Convergence White crosshair" },
       "description": { "ru": "Прицел с белым перекрестием. Хорошо виден на любом фоне." },
       "category": "Сведение",
@@ -112,7 +112,7 @@
       ]
     },
     {
-      "id": "Castiel-crosshair",
+      "id": "Castiel-crosshair-arkada",
       "title": { "ru": "Аркадный Castiel" },
       "description": { "ru": "Прицел Castiel. Аркадный."},
       "category": "Аркадный",
@@ -123,7 +123,7 @@
       ]
     },
     {
-      "id": "Castiel-crosshair",
+      "id": "Castiel-crosshair-sniper",
       "title": { "ru": "Снайперский Castiel прицел" },
       "description": { "ru": "Прицел Castiel. Снайперский." },
       "category": "Снайперский",
@@ -134,7 +134,7 @@
       ]
     },
     {
-      "id": "Castiel-crosshair",
+      "id": "Castiel-crosshair-say",
       "title": { "ru": "САУ Castiel прицел" },
       "description": { "ru": "Прицел Castiel. САУ." },
       "category": "САУ",
@@ -145,7 +145,7 @@
       ]
     },
     {
-      "id": "Castiel-crosshair",
+      "id": "Castiel-crosshair-sturm-say",
       "title": { "ru": "Штурм САУ Castiel прицел" },
       "description": { "ru": "Прицел Castiel. Штурм САУ." },
       "category": "Штурм САУ",
@@ -168,7 +168,7 @@
       ]
     },
     {
-      "id": "DamagePanel",
+      "id": "DamagePanel-PS",
       "title": { "ru": "Панель повреждений Playstation" },
       "description": { "ru": "Панель повреждений c Playstation." },
       "category": "Панель повреждений",
@@ -180,7 +180,7 @@
       ]
     },
     {
-      "id": "DamagePanel",
+      "id": "DamagePanel-UGN",
       "title": { "ru": "Панель повреждений с УГН" },
       "description": { "ru": "Панель повреждений c УГН." },
       "category": "Панель повреждений",
@@ -191,69 +191,6 @@
         { "url": "mods/damagpanel/DamagPanelUGN/damagePanel.mtmod", "dest": "mods", "folder": "" },
         { "folderUrl": "mods/damagpanel/configs", "dest": "mods", "folder": "configs" }
       ]
-    },
-    {
-      "id": "aim-info",
-      "title": { "ru": "Информация при прицеливании", "en": "Aim info" },
-      "description": { "ru": "Время до сведения, дистанция, угол брони в прицеле.", "en": "Aim time, distance, armor angle." },
-      "category": "Информация",
-      "author": "Various",
-      "image": "images/placeholder.svg",
-      "files": []
-    },
-    {
-      "id": "convergence-mod",
-      "title": { "ru": "Индикатор сведения", "en": "Convergence indicator" },
-      "description": { "ru": "Отображение готовности орудия к выстрелу.", "en": "Gun convergence indicator." },
-      "category": "Сведение",
-      "author": "Various",
-      "image": "images/placeholder.svg",
-      "files": []
-    },
-    {
-      "id": "melty-math-mod",
-      "title": { "ru": "MeltyMath Mod", "en": "MeltyMath Mod" },
-      "description": { "ru": "Расчёт рикошета, пробития, углов брони в реальном времени.", "en": "Ricochet and penetration math in battle." },
-      "category": "Прицелы и расчёты",
-      "author": "MeltyMap",
-      "image": "images/melty.jpg",
-      "files": []
-    },
-    {
-      "id": "camera-mod",
-      "title": { "ru": "Моды камеры", "en": "Camera mods" },
-      "description": { "ru": "Угол обзора, высота, дистанция камеры.", "en": "Camera FOV, height, distance." },
-      "category": "Камера",
-      "author": "Various",
-      "image": "images/camera.jpg",
-      "files": []
-    },
-    {
-      "id": "sound-mod",
-      "title": { "ru": "Звуковые моды", "en": "Sound mods" },
-      "description": { "ru": "Замена звуков выстрелов, двигателей, взрывов.", "en": "Gun, engine, explosion sounds." },
-      "category": "Звук",
-      "author": "Various",
-      "image": "images/sound.jpg",
-      "files": []
-    },
-    {
-      "id": "safe-shot",
-      "title": { "ru": "Safe Shot (без союзного урона)", "en": "Safe Shot" },
-      "description": { "ru": "Блокировка выстрела при прицеливании в союзника.", "en": "Block shot when aiming at ally." },
-      "category": "Геймплей",
-      "author": "Various",
-      "image": "images/safeshot.jpg",
-      "files": []
-    },
-    {
-      "id": "battle-messenger",
-      "title": { "ru": "Battle Messenger", "en": "Battle Messenger" },
-      "description": { "ru": "Расширенный чат в бою: макросы, быстрые сообщения.", "en": "Extended battle chat and macros." },
-      "category": "Чат и сообщения",
-      "author": "Community",
-      "image": "images/messenger.jpg",
-      "files": []
     },
     {
       "id": "NaborLamp-sixth-sense-icon-v1",
@@ -354,7 +291,12 @@
       "author": "—",
       "image": "images/placeholder.svg",
       "files": []
-    }
+    },
+	"predefinedSets": [
+		{ "id": "no-fps-drop", "name": "Без просадки FPS", "modIds": [] },
+		{ "id": "minimal", "name": "Минимальный", "modIds": [] },
+		{ "id": "artem9799", "name": "Выбор Артема9799", "modIds": ["NaborLamp-sixth-sense-icon-v2","DamagePanel-UGN","Castiel-crosshair-full","","","",""] }
+	]
   ]
 }
  
