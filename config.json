@@ -45,7 +45,7 @@
     }
   ],
   "mods": [
-	{
+    {
       "id": "hanger-menager",
       "title": { "ru": "Менеджер Ангаров" },
       "description": { "ru": "Мод смены ангаров Менеджер Ангаров." },
@@ -56,7 +56,7 @@
         { "folderUrl": "mods/hanger/MenagerHanger", "dest": "mods", "folder": "" }
       ]
     },
-	{
+    {
       "id": "hanger-mini",
       "title": { "ru": "Менеджер Ангаров" },
       "description": { "ru": "Мод смены ангаров Менеджер Ангаров." },
@@ -111,7 +111,7 @@
         { "folderUrl": "mods/crosshair/white", "dest": "mods", "folder": "" }
       ]
     },
-	{
+    {
       "id": "Castiel-crosshair",
       "title": { "ru": "Аркадный Castiel" },
       "description": { "ru": "Прицел Castiel. Аркадный."},
@@ -122,7 +122,7 @@
         { "url": "mods/crosshair/Castiel/crosshair_arcade.wotmod", "dest": "mods", "folder": "" }
       ]
     },
-	{
+    {
       "id": "Castiel-crosshair",
       "title": { "ru": "Снайперский Castiel прицел" },
       "description": { "ru": "Прицел Castiel. Снайперский." },
@@ -133,7 +133,7 @@
         { "url": "mods/crosshair/Castiel/crosshair_Controls.wotmod", "dest": "mods", "folder": "" }
       ]
     },
-	{
+    {
       "id": "Castiel-crosshair",
       "title": { "ru": "САУ Castiel прицел" },
       "description": { "ru": "Прицел Castiel. САУ." },
@@ -144,7 +144,7 @@
         { "url": "mods/crosshair/Castiel/crosshair_strategic.wotmod", "dest": "mods", "folder": "" }
       ]
     },
-	{
+    {
       "id": "Castiel-crosshair",
       "title": { "ru": "Штурм САУ Castiel прицел" },
       "description": { "ru": "Прицел Castiel. Штурм САУ." },
@@ -155,7 +155,7 @@
         { "url": "mods/crosshair/Castiel/assaultCrosshair.wotmod", "dest": "mods", "folder": "" }
       ]
     },
-	{
+    {
       "id": "Castiel-crosshair-full",
       "title": { "ru": "Castiel прицел (целый)" },
       "description": { "ru": "Полный набор Castiel прицела: аркадный, снайперский, САУ, Штурм САУ и сведение в одном моде. Установите один раз — все.", "en": "Full white crosshair pack: arcade, sniper and convergence in one mod." },
@@ -179,7 +179,7 @@
         { "folderUrl": "mods/damagpanel/configs", "dest": "mods", "folder": "configs" }
       ]
     },
-	{
+    {
       "id": "DamagePanel",
       "title": { "ru": "Панель повреждений с УГН" },
       "description": { "ru": "Панель повреждений c УГН." },
@@ -188,7 +188,7 @@
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/damagpanel/DamagPanelUGN/Inner.jpg",
       "files": [
         { "url": "mods/damagpanel/DamagPanelUGN/phantasm.damage_log.mtmod", "dest": "mods", "folder": "" },
-		{ "url": "mods/damagpanel/DamagPanelUGN/damagePanel.mtmod", "dest": "mods", "folder": "" },
+        { "url": "mods/damagpanel/DamagPanelUGN/damagePanel.mtmod", "dest": "mods", "folder": "" },
         { "folderUrl": "mods/damagpanel/configs", "dest": "mods", "folder": "configs" }
       ]
     },
