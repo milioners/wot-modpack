@@ -50,7 +50,17 @@
         { "folderUrl": "mods/hanger/MenagerHanger", "dest": "mods", "folder": "" }
       ]
     },
-	
+	{
+      "id": "hanger-mini",
+      "title": { "ru": "Менеджер Ангаров" },
+      "description": { "ru": "Мод смены ангаров Менеджер Ангаров." },
+      "category": "hangar",
+      "author": "phantasm",
+      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/hanger/MinimalHanger/minihanger.jpg",
+      "files": [
+        { "folderUrl": "mods/hanger/MinimalHanger", "dest": "mods", "folder": "" }
+      ]
+    },
     {
       "id": "white-crosshair",
       "title": { "ru": "Аркадный Белый" },
