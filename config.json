@@ -159,8 +159,7 @@
       "author": "Andre_V",
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/damagpanel/DamagPanelUGN/Inner.jpg",
       "files": [
-        { "url": "mods/damagpanel/DamagPanelUGN/damagePanel.mtmod", "dest": "mods", "folder": "" },
-		{ "url": "mods/damagpanel/DamagPanelUGN/phantasm.damage_log.mtmod", "dest": "mods", "folder": "" },
+        { "folderUrl": "mods/damagpanel/DamagPanelUGN", "dest": "mods", "folder": "" },
         { "folderUrl": "mods/damagpanel/configs", "dest": "mods", "folder": "configs" }
       ]
     },
