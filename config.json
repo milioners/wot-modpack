@@ -256,7 +256,7 @@
       "files": []
     },
     {
-      "id": "NaborLamp-sixth-sense-icon",
+      "id": "NaborLamp-sixth-sense-icon-v1",
       "title": { "ru": "Иконка «Шестое чувство» V1", "en": "Sixth sense icon" },
       "description": { "ru": "Замена лампочки засвета на более заметную иконку." },
       "category": "Статические",
@@ -264,6 +264,17 @@
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/six_sense/stat/v1.png",
       "files": [
         { "folderUrl": "mods/six_sense/stat/v.1/mods", "dest": "mods", "folder": "" }
+      ]
+    },
+	{
+      "id": "NaborLamp-sixth-sense-icon-v2",
+      "title": { "ru": "Иконка «Шестое чувство» V2", "en": "Sixth sense icon" },
+      "description": { "ru": "Замена лампочки засвета на более заметную иконку." },
+      "category": "Статические",
+      "author": "Various",
+      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/six_sense/stat/v2.png",
+      "files": [
+        { "folderUrl": "mods/six_sense/stat/v.2/mods", "dest": "mods", "folder": "" }
       ]
     },
     {
