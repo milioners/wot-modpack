@@ -246,51 +246,6 @@
       "files": [
         { "folderUrl": "mods/six_sense/stat/v.5/mods", "dest": "mods", "folder": "" }
       ]
-    },
-    {
-      "id": "damage-log",
-      "title": { "ru": "Лог урона", "en": "Damage log" },
-      "description": { "ru": "Детальный лог нанесённого и полученного урона.", "en": "Damage dealt and received log." },
-      "category": "Лог урона",
-      "author": "Various",
-      "image": "images/damagelog.jpg",
-      "files": []
-    },
-    {
-      "id": "session-stats",
-      "title": { "ru": "Статистика сессии", "en": "Session statistics" },
-      "description": { "ru": "Статистика за текущую игровую сессию.", "en": "Stats for current session." },
-      "category": "Статистика в ангаре",
-      "author": "Various",
-      "image": "images/session.jpg",
-      "files": []
-    },
-    {
-      "id": "xvm",
-      "title": { "ru": "XVM", "en": "XVM" },
-      "description": { "ru": "Рейтинг WN8, проценты побед, маркеры над танками, карта с засветом.", "en": "WN8, win rate, markers, minimap." },
-      "category": "Статистика и маркеры в бою",
-      "author": "XVM Team",
-      "image": "images/xvm.jpg",
-      "files": []
-    },
-    {
-      "id": "crew-voice",
-      "title": { "ru": "Озвучка экипажа", "en": "Crew voiceover" },
-      "description": { "ru": "Замена голосов экипажа: команды, реплики в бою. Можно добавить свой пакет озвучки через папку на GitHub.", "en": "Replace crew voices: commands, battle lines. Add your voice pack via GitHub folder." },
-      "category": "Озвучка экипажа",
-      "author": "—",
-      "image": "images/placeholder.svg",
-      "files": []
-    },
-    {
-      "id": "battle-sounds",
-      "title": { "ru": "Звуки в бою", "en": "Battle sounds" },
-      "description": { "ru": "Замена звуков выстрелов, двигателей, взрывов, окружения. Добавьте мод с папкой на GitHub (folderUrl).", "en": "Replace gun, engine, explosion, ambient sounds. Add mod with folderUrl on GitHub." },
-      "category": "Звуки в бою",
-      "author": "—",
-      "image": "images/placeholder.svg",
-      "files": []
     }
   ],
   "predefinedSets": [
