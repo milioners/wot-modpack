@@ -147,7 +147,7 @@
       "category": "Панель повреждений",
       "author": "Andre_V",
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/damagpanel/Playstation/Version.1.jpg",
-      "files": ["url": "mods/damagpanel/Playstation/damagePanel.mtmod", "dest": "mods", "folder": ""]
+      "files": [{ "url": "mods/damagpanel/Playstation/damagePanel.mtmod", "dest": "mods", "folder": "" }]
     },
     {
       "id": "aim-info",
