@@ -43,13 +43,14 @@
       "id": "hanger-menager",
       "title": { "ru": "Менеджер Ангаров" },
       "description": { "ru": "Мод смены ангаров Менеджер Ангаров." },
-      "category": "Ангар",
+      "category": "hangar",
       "author": "phantasm",
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/hanger/MenagerHanger/hangarmenage.jpg",
       "files": [
         { "folderUrl": "mods/hanger/MenagerHanger", "dest": "mods", "folder": "" }
       ]
     },
+	
     {
       "id": "white-crosshair",
       "title": { "ru": "Аркадный Белый" },

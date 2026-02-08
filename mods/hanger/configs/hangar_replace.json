@@ -1,0 +1,4 @@
+{
+    "target": "spaces/hmhm",
+    "replace": ["spaces/h01_victory_day_2025", "spaces/h08_mt_hangar", "spaces/h09_mt_bday_2024","spaces/h33_battle_royale_2021", "spaces/h10_mt_23feb_2025", "spaces/h01_victory_day_2024", "spaces/h00_armory_yard"]
+}
