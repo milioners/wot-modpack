@@ -36,6 +36,12 @@
       "title": { "ru": "Звуки и озвучка" },
       "icon": "♪",
       "subcategories": ["Озвучка экипажа", "Звуки в бою"]
+    },
+    {
+      "name": "six_sense",
+      "title": { "ru": "Лампочка 6 чувства" },
+      "icon": "♪",
+      "subcategories": ["Анимированные", "Статические"]
     }
   ],
   "mods": [
@@ -63,7 +69,7 @@
     },
     {
       "id": "white-crosshair",
-      "title": { "ru": "Аркадный Белый" },
+      "title": { "ru": "Аркадный Белый", "en": "White crosshair" },
       "description": { "ru": "Прицел с белым перекрестием. Аркадный. Хорошо виден на любом фоне." },
       "category": "Аркадный",
       "author": "Various",
@@ -74,7 +80,7 @@
     },
     {
       "id": "white-crosshair",
-      "title": { "ru": "Снайперский Белый" },
+      "title": { "ru": "Снайперский Белый", "en": "White crosshair" },
       "description": { "ru": "Прицел с белым перекрестием. Снайперский. Хорошо виден на любом фоне." },
       "category": "Снайперский",
       "author": "Various",
@@ -85,7 +91,7 @@
     },
     {
       "id": "white-crosshair",
-      "title": { "ru": "Сведение Белое" },
+      "title": { "ru": "Сведение Белое", "en": "Convergence White crosshair" },
       "description": { "ru": "Прицел с белым перекрестием. Хорошо виден на любом фоне." },
       "category": "Сведение",
       "author": "Various",
@@ -96,7 +102,7 @@
     },
     {
       "id": "white-crosshair-full",
-      "title": { "ru": "Белый прицел (целый)" },
+      "title": { "ru": "Белый прицел (целый)", "en": "White crosshair (full)" },
       "description": { "ru": "Полный набор белого прицела: аркадный, снайперский и сведение в одном моде. Установите один раз — все."},
       "category": "Целый прицел",
       "author": "Various",
