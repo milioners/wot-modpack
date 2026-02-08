@@ -139,7 +139,6 @@
 
       ]
     },
-    
     {
       "id": "DamagePanel",
       "title": { "ru": "Панель повреждений Playstation" },
@@ -152,6 +151,19 @@
         { "folderUrl": "mods/damagpanel/configs", "dest": "mods", "folder": "" }
       ]
     },
+	{
+      "id": "DamagePanel",
+      "title": { "ru": "Панель повреждений с УГН" },
+      "description": { "ru": "Панель повреждений c УГН." },
+      "category": "Панель повреждений",
+      "author": "Andre_V",
+      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/damagpanel/DamagPanelUGN/Inner.jpg",
+      "files": [
+        { "url": "mods/damagpanel/DamagPanelUGN/damagePanel.mtmod", "dest": "mods", "folder": "" },
+		{ "url": "mods/damagpanel/DamagPanelUGN/phantasm.damage_log.mtmod", "dest": "mods", "folder": "" },
+        { "folderUrl": "mods/damagpanel/configs", "dest": "mods", "folder": "" }
+      ]
+    }
     {
       "id": "aim-info",
       "title": { "ru": "Информация при прицеливании", "en": "Aim info" },
