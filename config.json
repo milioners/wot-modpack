@@ -311,15 +311,6 @@
       ]
     },
     {
-      "id": "contour-icons",
-      "title": { "ru": "Контурные иконки танков", "en": "Contour icons" },
-      "description": { "ru": "Иконки танков на миникарте и над техникой.", "en": "Tank icons on minimap and over vehicles." },
-      "category": "Иконки и индикаторы",
-      "author": "Various",
-      "image": "images/icons.jpg",
-      "files": []
-    },
-    {
       "id": "damage-log",
       "title": { "ru": "Лог урона", "en": "Damage log" },
       "description": { "ru": "Детальный лог нанесённого и полученного урона.", "en": "Damage dealt and received log." },
