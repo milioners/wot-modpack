@@ -68,41 +68,8 @@
       ]
     },
     {
-      "id": "white-crosshair-arkada",
-      "title": { "ru": "Аркадный Белый", "en": "White crosshair" },
-      "description": { "ru": "Прицел с белым перекрестием. Аркадный. Хорошо виден на любом фоне." },
-      "category": "Аркадный",
-      "author": "Various",
-      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/white.jpg",
-      "files": [
-        { "url": "mods/crosshair/white/crosshair_arcade.wotmod", "dest": "mods", "folder": "" }
-      ]
-    },
-    {
-      "id": "white-crosshair-sniper",
-      "title": { "ru": "Снайперский Белый", "en": "White crosshair" },
-      "description": { "ru": "Прицел с белым перекрестием. Снайперский. Хорошо виден на любом фоне." },
-      "category": "Снайперский",
-      "author": "Various",
-      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/white.jpg",
-      "files": [
-        { "url": "mods/crosshair/white/crosshair_sniper.wotmod", "dest": "mods", "folder": "" }
-      ]
-    },
-    {
-      "id": "white-crosshair-svedenie",
-      "title": { "ru": "Сведение Белое", "en": "Convergence White crosshair" },
-      "description": { "ru": "Прицел с белым перекрестием. Хорошо виден на любом фоне." },
-      "category": "Сведение",
-      "author": "Various",
-      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/white.jpg",
-      "files": [
-        { "url": "mods/crosshair/white/crosshair_Controls.wotmod", "dest": "mods", "folder": "" }
-      ]
-    },
-    {
       "id": "white-crosshair-full",
-      "title": { "ru": "Белый прицел (целый)", "en": "White crosshair (full)" },
+      "title": { "ru": "Белый прицел" },
       "description": { "ru": "Полный набор белого прицела: аркадный, снайперский и сведение в одном моде. Установите один раз — все."},
       "category": "Целый прицел",
       "author": "Various",
@@ -112,53 +79,9 @@
       ]
     },
     {
-      "id": "Castiel-crosshair-arkada",
-      "title": { "ru": "Аркадный Castiel" },
-      "description": { "ru": "Прицел Castiel. Аркадный."},
-      "category": "Аркадный",
-      "author": "Andre_V",
-      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/Castiel/crosshair_arcade.jpg",
-      "files": [
-        { "url": "mods/crosshair/Castiel/crosshair_arcade.wotmod", "dest": "mods", "folder": "" }
-      ]
-    },
-    {
-      "id": "Castiel-crosshair-sniper",
-      "title": { "ru": "Снайперский Castiel прицел" },
-      "description": { "ru": "Прицел Castiel. Снайперский." },
-      "category": "Снайперский",
-      "author": "Andre_V",
-      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/Castiel/crosshair_sniper.jpg",
-      "files": [
-        { "url": "mods/crosshair/Castiel/crosshair_Controls.wotmod", "dest": "mods", "folder": "" }
-      ]
-    },
-    {
-      "id": "Castiel-crosshair-say",
-      "title": { "ru": "САУ Castiel прицел" },
-      "description": { "ru": "Прицел Castiel. САУ." },
-      "category": "САУ",
-      "author": "Andre_V",
-      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/Castiel/crosshair_strategic.jpg",
-      "files": [
-        { "url": "mods/crosshair/Castiel/crosshair_strategic.wotmod", "dest": "mods", "folder": "" }
-      ]
-    },
-    {
-      "id": "Castiel-crosshair-sturm-say",
-      "title": { "ru": "Штурм САУ Castiel прицел" },
-      "description": { "ru": "Прицел Castiel. Штурм САУ." },
-      "category": "Штурм САУ",
-      "author": "Andre_V",
-      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/Castiel/assaultCrosshair.jpg",
-      "files": [
-        { "url": "mods/crosshair/Castiel/assaultCrosshair.wotmod", "dest": "mods", "folder": "" }
-      ]
-    },
-    {
       "id": "Castiel-crosshair-full",
-      "title": { "ru": "Castiel прицел (целый)" },
-      "description": { "ru": "Полный набор Castiel прицела: аркадный, снайперский, САУ, Штурм САУ и сведение в одном моде. Установите один раз — все.", "en": "Full white crosshair pack: arcade, sniper and convergence in one mod." },
+      "title": { "ru": "Castiel прицел" },
+      "description": { "ru": "Полный набор Castiel прицела: аркадный, снайперский, САУ, Штурм САУ и сведение в одном моде. Установите один раз — все." },
       "category": "Целый прицел",
       "author": "Andre_V",
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/Castiel/crosshair_arcade.jpg",
