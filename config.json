@@ -71,7 +71,7 @@
       "id": "white-crosshair-full",
       "title": { "ru": "Белый прицел" },
       "description": { "ru": "Полный набор белого прицела: аркадный, снайперский и сведение в одном моде. Установите один раз — все."},
-      "category": "Целый прицел",
+      "category": "Прицелы",
       "author": "Various",
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/white.jpg",
       "files": [
@@ -82,7 +82,7 @@
       "id": "Castiel-crosshair-full",
       "title": { "ru": "Castiel прицел" },
       "description": { "ru": "Полный набор Castiel прицела: аркадный, снайперский, САУ, Штурм САУ и сведение в одном моде. Установите один раз — все." },
-      "category": "Целый прицел",
+      "category": "Прицелы",
       "author": "Andre_V",
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/Castiel/crosshair_arcade.jpg",
       "files": [
