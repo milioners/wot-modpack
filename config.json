@@ -89,7 +89,6 @@
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/Castiel/crosshair_arcade.jpg",
       "files": [
         { "folderUrl": "mods/crosshair/Castiel", "dest": "mods", "folder": "" }
-
       ]
     },
 	{
@@ -121,7 +120,7 @@
 	  "description": { "ru": "Полный набор Jove прицела: аркадный, снайперский, САУ, Штурм САУ и сведение в одном моде. Установите один раз — все." },
 	  "category": "Прицелы",
 	  "author": "Jove",
-	  "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/Jove/SightOreshkina.jpg",
+	  "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/Jove/SightJove.jpg",
 	  "files": [
 		{ "folderUrl": "mods/crosshair/Jove", "dest": "mods", "folder": "" },
 		{ "folderUrl": "mods/crosshair/Jove/configs", "dest": "mods", "folder": "configs" }
