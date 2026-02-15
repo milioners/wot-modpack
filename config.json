@@ -157,7 +157,7 @@
       "description": { "ru": "Показ сферы разлёта фугасного снаряда для арты. Требует папку spoter в папке версии игры." },
       "category": "Геймплей",
       "author": "Various",
-      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/placeholder.svg",
+      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/battelmods/Splash/artySplash.jpg",
       "files": [
         { "folderUrl": "mods/battelmods/Splash/configs/spoter", "dest": "mods", "folder": "spoter" },
         { "folderUrl": "mods/battelmods/Splash/configs/mods_gui", "dest": "mods", "folder": "configs" }
