@@ -1,6 +1,9 @@
 {
   "targetClient": "Lesta",
   "gameVersion": "1.40",
+  "crosshairApi": {
+    "url": "https://raw.githubusercontent.com/milioners/wot-modpack/main/mods/crosshair/crosshairs_api_1.1.wotmod"
+  },
   "categories": [
     {
       "name": "hangar",
@@ -94,11 +97,34 @@
 	  "title": { "ru": "Zayaz прицел" },
 	  "description": { "ru": "Полный набор Zayaz прицела: аркадный, снайперский, САУ, Штурм САУ и сведение в одном моде. Установите один раз — все." },
 	  "category": "Прицелы",
-	  "author": "Andre_V",
+	  "author": "Zayaz, Andre_V",
 	  "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/Zayaz/Sightzayaz.jpg",
 	  "files": [
 		{ "folderUrl": "mods/crosshair/Zayaz", "dest": "mods", "folder": "" },
 		{ "folderUrl": "mods/crosshair/Zayaz/configs", "dest": "mods", "folder": "configs" }
+	  ]
+	},
+	{
+	  "id": "Oreshkina-crosshair-full",
+	  "title": { "ru": "Oreshkina прицел" },
+	  "description": { "ru": "Полный набор Oreshkina прицела: аркадный, снайперский, САУ, Штурм САУ и сведение в одном моде. Установите один раз — все." },
+	  "category": "Прицелы",
+	  "author": "Andre_V",
+	  "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/Oreshkina/SightOreshkina.jpg",
+	  "files": [
+		{ "folderUrl": "mods/crosshair/Oreshkina", "dest": "mods", "folder": "" },
+	  ]
+	},
+	{
+	  "id": "Jove-crosshair-full",
+	  "title": { "ru": "Jove прицел" },
+	  "description": { "ru": "Полный набор Jove прицела: аркадный, снайперский, САУ, Штурм САУ и сведение в одном моде. Установите один раз — все." },
+	  "category": "Прицелы",
+	  "author": "Jove",
+	  "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/Jove/SightOreshkina.jpg",
+	  "files": [
+		{ "folderUrl": "mods/crosshair/Jove", "dest": "mods", "folder": "" },
+		{ "folderUrl": "mods/crosshair/Jove/configs", "dest": "mods", "folder": "configs" }
 	  ]
 	},
     {
