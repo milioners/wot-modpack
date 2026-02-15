@@ -7,210 +7,395 @@
   "categories": [
     {
       "name": "hangar",
-      "title": { "ru": "Ангар" },
+      "title": {
+        "ru": "Ангар"
+      },
       "image": "categories/hangar.jpg"
     },
     {
       "name": "aim",
-      "title": { "ru": "Прицелы" },
+      "title": {
+        "ru": "Прицелы"
+      },
       "icon": "⚔"
     },
     {
       "name": "battle",
-      "title": { "ru": "Боевые моды" },
+      "title": {
+        "ru": "Боевые моды"
+      },
       "icon": "⚔",
-      "subcategories": ["Панель повреждений", "Камера", "Звук", "Геймплей"]
+      "subcategories": [
+        "Панель повреждений",
+        "Камера",
+        "Звук",
+        "Геймплей"
+      ]
     },
     {
       "name": "interface",
-      "title": { "ru": "Интерфейс" },
+      "title": {
+        "ru": "Интерфейс"
+      },
       "icon": "▦",
-      "subcategories": ["Чат и сообщения", "Иконки и индикаторы", "Лог урона"]
+      "subcategories": [
+        "Чат и сообщения",
+        "Иконки и индикаторы",
+        "Лог урона"
+      ]
     },
     {
       "name": "stats",
-      "title": { "ru": "Статистика" },
+      "title": {
+        "ru": "Статистика"
+      },
       "icon": "▦",
-      "subcategories": ["Статистика в ангаре", "Статистика и маркеры в бою"]
+      "subcategories": [
+        "Статистика в ангаре",
+        "Статистика и маркеры в бою"
+      ]
     },
     {
       "name": "sounds",
-      "title": { "ru": "Звуки и озвучка" },
+      "title": {
+        "ru": "Звуки и озвучка"
+      },
       "icon": "♪",
-      "subcategories": ["Озвучка экипажа", "Звуки в бою"]
+      "subcategories": [
+        "Озвучка экипажа",
+        "Звуки в бою"
+      ]
     },
     {
       "name": "six_sense",
-      "title": { "ru": "Лампочка 6 чувства" },
+      "title": {
+        "ru": "Лампочка 6 чувства"
+      },
       "icon": "♪",
-      "subcategories": ["Анимированные", "Статические"]
+      "subcategories": [
+        "Анимированные",
+        "Статические"
+      ]
     }
   ],
   "mods": [
     {
       "id": "hanger-menager",
-      "title": { "ru": "Менеджер Ангаров" },
-      "description": { "ru": "Мод смены ангаров Менеджер Ангаров." },
+      "title": {
+        "ru": "Менеджер Ангаров"
+      },
+      "description": {
+        "ru": "Мод смены ангаров Менеджер Ангаров."
+      },
       "category": "Ангар",
       "author": "phantasm",
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/hanger/MenagerHanger/hangarmenage.jpg",
       "files": [
-        { "folderUrl": "mods/hanger/MenagerHanger", "dest": "mods", "folder": "" }
+        {
+          "folderUrl": "mods/hanger/MenagerHanger",
+          "dest": "mods",
+          "folder": ""
+        }
       ]
     },
     {
       "id": "hanger-mini",
-      "title": { "ru": "Минималистичный ангар PROTанки" },
-      "description": { "ru": "Минималистичный ангар PROTанки." },
+      "title": {
+        "ru": "Минималистичный ангар PROTанки"
+      },
+      "description": {
+        "ru": "Минималистичный ангар PROTанки."
+      },
       "category": "Ангар",
       "author": "phantasm",
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/hanger/MinimalHanger/minihanger.jpg",
       "files": [
-        { "folderUrl": "mods/hanger/MinimalHanger", "dest": "mods", "folder": "" }
+        {
+          "folderUrl": "mods/hanger/MinimalHanger",
+          "dest": "mods",
+          "folder": ""
+        }
       ]
     },
     {
       "id": "white-crosshair-full",
-      "title": { "ru": "Белый прицел" },
-      "description": { "ru": "Полный набор белого прицела: аркадный, снайперский и сведение в одном моде. Установите один раз — все."},
+      "title": {
+        "ru": "Белый прицел"
+      },
+      "description": {
+        "ru": "Полный набор белого прицела: аркадный, снайперский и сведение в одном моде. Установите один раз — все."
+      },
       "category": "Прицелы",
       "author": "Various",
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/white.jpg",
       "files": [
-        { "folderUrl": "mods/crosshair/white", "dest": "mods", "folder": "" }
+        {
+          "folderUrl": "mods/crosshair/white",
+          "dest": "mods",
+          "folder": ""
+        }
       ]
     },
     {
       "id": "Castiel-crosshair-full",
-      "title": { "ru": "Castiel прицел" },
-      "description": { "ru": "Полный набор Castiel прицела: аркадный, снайперский, САУ, Штурм САУ и сведение в одном моде. Установите один раз — все." },
+      "title": {
+        "ru": "Castiel прицел"
+      },
+      "description": {
+        "ru": "Полный набор Castiel прицела: аркадный, снайперский, САУ, Штурм САУ и сведение в одном моде. Установите один раз — все."
+      },
       "category": "Прицелы",
       "author": "Andre_V",
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/Castiel/crosshair_arcade.jpg",
       "files": [
-        { "folderUrl": "mods/crosshair/Castiel", "dest": "mods", "folder": "" }
+        {
+          "folderUrl": "mods/crosshair/Castiel",
+          "dest": "mods",
+          "folder": ""
+        }
       ]
     },
-	{
-	  "id": "Zayaz-crosshair-full",
-	  "title": { "ru": "Zayaz прицел" },
-	  "description": { "ru": "Полный набор Zayaz прицела: аркадный, снайперский, САУ, Штурм САУ и сведение в одном моде. Установите один раз — все." },
-	  "category": "Прицелы",
-	  "author": "Zayaz, Andre_V",
-	  "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/Zayaz/Sightzayaz.jpg",
-	  "files": [
-		{ "folderUrl": "mods/crosshair/Zayaz", "dest": "mods", "folder": "" },
-		{ "folderUrl": "mods/crosshair/Zayaz/configs", "dest": "mods", "folder": "configs" }
-	  ]
-	},
-	{
-	  "id": "Oreshkina-crosshair-full",
-	  "title": { "ru": "Oreshkina прицел" },
-	  "description": { "ru": "Полный набор Oreshkina прицела: аркадный, снайперский, САУ, Штурм САУ и сведение в одном моде. Установите один раз — все." },
-	  "category": "Прицелы",
-	  "author": "Andre_V",
-	  "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/Oreshkina/SightOreshkina.jpg",
+    {
+      "id": "Zayaz-crosshair-full",
+      "title": {
+        "ru": "Zayaz прицел"
+      },
+      "description": {
+        "ru": "Полный набор Zayaz прицела: аркадный, снайперский, САУ, Штурм САУ и сведение в одном моде. Установите один раз — все."
+      },
+      "category": "Прицелы",
+      "author": "Zayaz, Andre_V",
+      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/Zayaz/Sightzayaz.jpg",
       "files": [
-		{ "folderUrl": "mods/crosshair/Oreshkina", "dest": "mods", "folder": "" }
-	  ]
-	},
-	{
-	  "id": "Jove-crosshair-full",
-	  "title": { "ru": "Jove прицел" },
-	  "description": { "ru": "Полный набор Jove прицела: аркадный, снайперский, САУ, Штурм САУ и сведение в одном моде. Установите один раз — все." },
-	  "category": "Прицелы",
-	  "author": "Jove",
-	  "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/Jove/SightJove.jpg",
-	  "files": [
-		{ "folderUrl": "mods/crosshair/Jove", "dest": "mods", "folder": "" },
-		{ "folderUrl": "mods/crosshair/Jove/configs", "dest": "mods", "folder": "configs" }
-	  ]
-	},
+        {
+          "folderUrl": "mods/crosshair/Zayaz",
+          "dest": "mods",
+          "folder": ""
+        },
+        {
+          "folderUrl": "mods/crosshair/Zayaz/configs",
+          "dest": "mods",
+          "folder": "configs"
+        }
+      ]
+    },
+    {
+      "id": "Oreshkina-crosshair-full",
+      "title": {
+        "ru": "Oreshkina прицел"
+      },
+      "description": {
+        "ru": "Полный набор Oreshkina прицела: аркадный, снайперский, САУ, Штурм САУ и сведение в одном моде. Установите один раз — все."
+      },
+      "category": "Прицелы",
+      "author": "Andre_V",
+      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/Oreshkina/SightOreshkina.jpg",
+      "files": [
+        {
+          "folderUrl": "mods/crosshair/Oreshkina",
+          "dest": "mods",
+          "folder": ""
+        }
+      ]
+    },
+    {
+      "id": "Jove-crosshair-full",
+      "title": {
+        "ru": "Jove прицел"
+      },
+      "description": {
+        "ru": "Полный набор Jove прицела: аркадный, снайперский, САУ, Штурм САУ и сведение в одном моде. Установите один раз — все."
+      },
+      "category": "Прицелы",
+      "author": "Jove",
+      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/Jove/SightJove.jpg",
+      "files": [
+        {
+          "folderUrl": "mods/crosshair/Jove",
+          "dest": "mods",
+          "folder": ""
+        },
+        {
+          "folderUrl": "mods/crosshair/Jove/configs",
+          "dest": "mods",
+          "folder": "configs"
+        }
+      ]
+    },
     {
       "id": "DamagePanel-PS",
-      "title": { "ru": "Панель повреждений Playstation" },
-      "description": { "ru": "Панель повреждений c Playstation." },
+      "title": {
+        "ru": "Панель повреждений Playstation"
+      },
+      "description": {
+        "ru": "Панель повреждений c Playstation."
+      },
       "category": "Панель повреждений",
       "author": "Andre_V",
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/damagpanel/Playstation/Version.1.jpg",
       "files": [
-        { "url": "mods/damagpanel/Playstation/damagePanel.mtmod", "dest": "mods", "folder": "" },
-        { "folderUrl": "mods/damagpanel/configs", "dest": "mods", "folder": "configs" }
+        {
+          "url": "mods/damagpanel/Playstation/damagePanel.mtmod",
+          "dest": "mods",
+          "folder": ""
+        },
+        {
+          "folderUrl": "mods/damagpanel/configs",
+          "dest": "mods",
+          "folder": "configs"
+        }
       ]
     },
     {
       "id": "DamagePanel-UGN",
-      "title": { "ru": "Панель повреждений с УГН" },
-      "description": { "ru": "Панель повреждений c УГН." },
+      "title": {
+        "ru": "Панель повреждений с УГН"
+      },
+      "description": {
+        "ru": "Панель повреждений c УГН."
+      },
       "category": "Панель повреждений",
       "author": "Andre_V",
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/damagpanel/DamagPanelUGN/Inner.jpg",
       "files": [
-        { "url": "mods/damagpanel/DamagPanelUGN/phantasm.damage_log.mtmod", "dest": "mods", "folder": "" },
-        { "url": "mods/damagpanel/DamagPanelUGN/damagePanel.mtmod", "dest": "mods", "folder": "" },
-        { "folderUrl": "mods/damagpanel/configs", "dest": "mods", "folder": "configs" }
+        {
+          "url": "mods/damagpanel/DamagPanelUGN/phantasm.damage_log.mtmod",
+          "dest": "mods",
+          "folder": ""
+        },
+        {
+          "url": "mods/damagpanel/DamagPanelUGN/damagePanel.mtmod",
+          "dest": "mods",
+          "folder": ""
+        },
+        {
+          "folderUrl": "mods/damagpanel/configs",
+          "dest": "mods",
+          "folder": "configs"
+        }
       ]
     },
     {
       "id": "NaborLamp-sixth-sense-icon-v1",
-      "title": { "ru": "Иконка «Шестое чувство» V1", "en": "Sixth sense icon" },
-      "description": { "ru": "Замена лампочки засвета на более заметную иконку." },
+      "title": {
+        "ru": "Иконка «Шестое чувство» V1",
+        "en": "Sixth sense icon"
+      },
+      "description": {
+        "ru": "Замена лампочки засвета на более заметную иконку."
+      },
       "category": "Статические",
       "author": "71G1L",
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/six_sense/stat/v1.png",
       "files": [
-        { "folderUrl": "mods/six_sense/stat/v.1/mods", "dest": "mods", "folder": "" }
+        {
+          "folderUrl": "mods/six_sense/stat/v.1/mods",
+          "dest": "mods",
+          "folder": ""
+        }
       ]
     },
     {
       "id": "NaborLamp-sixth-sense-icon-v2",
-      "title": { "ru": "Иконка «Шестое чувство» V2", "en": "Sixth sense icon" },
-      "description": { "ru": "Замена лампочки засвета на более заметную иконку." },
+      "title": {
+        "ru": "Иконка «Шестое чувство» V2",
+        "en": "Sixth sense icon"
+      },
+      "description": {
+        "ru": "Замена лампочки засвета на более заметную иконку."
+      },
       "category": "Статические",
       "author": "71G1L",
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/six_sense/stat/v2.png",
       "files": [
-        { "folderUrl": "mods/six_sense/stat/v.2/mods", "dest": "mods", "folder": "" }
+        {
+          "folderUrl": "mods/six_sense/stat/v.2/mods",
+          "dest": "mods",
+          "folder": ""
+        }
       ]
     },
     {
       "id": "NaborLamp-sixth-sense-icon-v3",
-      "title": { "ru": "Иконка «Шестое чувство» V3", "en": "Sixth sense icon" },
-      "description": { "ru": "Замена лампочки засвета на более заметную иконку." },
+      "title": {
+        "ru": "Иконка «Шестое чувство» V3",
+        "en": "Sixth sense icon"
+      },
+      "description": {
+        "ru": "Замена лампочки засвета на более заметную иконку."
+      },
       "category": "Статические",
       "author": "71G1L",
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/six_sense/stat/v3.png",
       "files": [
-        { "folderUrl": "mods/six_sense/stat/v.3/mods", "dest": "mods", "folder": "" }
+        {
+          "folderUrl": "mods/six_sense/stat/v.3/mods",
+          "dest": "mods",
+          "folder": ""
+        }
       ]
     },
     {
       "id": "NaborLamp-sixth-sense-icon-v4",
-      "title": { "ru": "Иконка «Шестое чувство» V4", "en": "Sixth sense icon" },
-      "description": { "ru": "Замена лампочки засвета на более заметную иконку." },
+      "title": {
+        "ru": "Иконка «Шестое чувство» V4",
+        "en": "Sixth sense icon"
+      },
+      "description": {
+        "ru": "Замена лампочки засвета на более заметную иконку."
+      },
       "category": "Статические",
       "author": "71G1L",
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/six_sense/stat/v4.png",
       "files": [
-        { "folderUrl": "mods/six_sense/stat/v.4/mods", "dest": "mods", "folder": "" }
+        {
+          "folderUrl": "mods/six_sense/stat/v.4/mods",
+          "dest": "mods",
+          "folder": ""
+        }
       ]
     },
     {
       "id": "NaborLamp-sixth-sense-icon-v5",
-      "title": { "ru": "Иконка «Шестое чувство» V5", "en": "Sixth sense icon" },
-      "description": { "ru": "Замена лампочки засвета на более заметную иконку." },
+      "title": {
+        "ru": "Иконка «Шестое чувство» V5",
+        "en": "Sixth sense icon"
+      },
+      "description": {
+        "ru": "Замена лампочки засвета на более заметную иконку."
+      },
       "category": "Статические",
       "author": "71G1L",
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/six_sense/stat/v5.png",
       "files": [
-        { "folderUrl": "mods/six_sense/stat/v.5/mods", "dest": "mods", "folder": "" }
+        {
+          "folderUrl": "mods/six_sense/stat/v.5/mods",
+          "dest": "mods",
+          "folder": ""
+        }
       ]
     }
   ],
   "predefinedSets": [
-	{ "id": "no-fps-drop", "name": "Без просадки FPS", "modIds": [] },
-	{ "id": "minimal", "name": "Минимальный", "modIds": [] },
-	{ "id": "artem9799", "name": "Выбор Артема9799", "modIds": ["NaborLamp-sixth-sense-icon-v2","DamagePanel-UGN","Castiel-crosshair-full","hanger-menager"] }
+    {
+      "id": "no-fps-drop",
+      "name": "Без просадки FPS",
+      "modIds": []
+    },
+    {
+      "id": "minimal",
+      "name": "Минимальный",
+      "modIds": []
+    },
+    {
+      "id": "artem9799",
+      "name": "Выбор Артема9799",
+      "modIds": [
+        "NaborLamp-sixth-sense-icon-v2",
+        "DamagePanel-UGN",
+        "Castiel-crosshair-full",
+        "hanger-menager"
+      ]
+    }
   ]
 }
- 
