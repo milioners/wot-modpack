@@ -1,0 +1,12 @@
+﻿{
+  "gui_name": "MODLAR - Ayarlar",
+  "gui_windowTitle": "Mod ayarları",
+  "gui_buttonOK": "Tamam",
+  "gui_buttonCancel": "İptal",
+  "gui_buttonApply": "Uygula",
+  "gui_enableButtonTooltip": "{HEADER}Mod ayarları{/HEADER}{BODY}Modları etkinleştir | devre dışı bırak ve ayarları yapılandır{/BODY}",
+  "web_resetToDefault": "Varsayılana sıfırla:",
+  "web_saved": "Kaydedildi!",
+  "web_saveError": "Ayarlar kaydedilirken hata oluştu. Ayrıntılar için konsolu kontrol edin.",
+  "version": 307
+}

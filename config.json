@@ -126,6 +126,22 @@
 		{ "folderUrl": "mods/crosshair/Jove/configs", "dest": "mods", "folder": "configs" }
 	  ]
 	},
+	
+	
+	{
+      "id": "Splash-ART",
+      "title": { "ru": "Фугасный Сплеш" },
+      "description": { "ru": "Фугасный Сплеш." },
+      "category": "Боевые моды",
+      "author": "Spoter",
+      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/battelmods/Splash/artySplash.jpg",
+      "files": [
+        { "folderUrl": "mods/battelmods/Splash", "dest": "mods", "folder": "" },
+        { "folderUrl": "mods/battelmods/Splash/configs", "dest": "mods", "folder": "configs" }
+      ]
+    },
+	
+	
     {
       "id": "DamagePanel-PS",
       "title": { "ru": "Панель повреждений Playstation" },

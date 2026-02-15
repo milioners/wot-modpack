@@ -1,0 +1,12 @@
+﻿{
+  "gui_name": "MODS - 設定",
+  "gui_windowTitle": "MOD 設定",
+  "gui_buttonOK": "確定",
+  "gui_buttonCancel": "取消",
+  "gui_buttonApply": "套用",
+  "gui_enableButtonTooltip": "{HEADER}MOD 設定{/HEADER}{BODY}啟用 | 停用 MOD 並調整設定{/BODY}",
+  "web_resetToDefault": "重設為預設值：",
+  "web_saved": "已儲存！",
+  "web_saveError": "儲存設定時發生錯誤。請檢查主控台以取得詳細資訊。",
+  "version": 307
+}

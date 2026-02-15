@@ -1,0 +1,2194 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ gui_windowTitle }}</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23FFD800' d='M20.017 14.669L23 13.564l-.012-3.208-2.996-1.085a8.455 8.455 0 0 0-.437-1.05l1.329-2.893-2.277-2.26-2.886 1.351a8.396 8.396 0 0 0-1.052-.436L13.564 1l-3.208.012-1.085 2.996a8.485 8.485 0 0 0-1.05.437L5.328 3.116l-2.26 2.276L4.419 8.28a8.378 8.378 0 0 0-.436 1.052L1 10.436l.012 3.208 2.996 1.085a8.46 8.46 0 0 0 .437 1.05l-1.329 2.893 2.276 2.26 2.887-1.351a8.383 8.383 0 0 0 1.052.436L10.436 23l3.208-.012 1.085-2.996a8.478 8.478 0 0 0 1.05-.437l2.893 1.329 2.26-2.276-1.351-2.887a8.382 8.382 0 0 0 .436-1.052zm-.287 3.73l-1.275 1.285-2.694-1.238-.429.215a7.612 7.612 0 0 1-.928.385l-.452.156-1.01 2.789-1.81.007-1.03-2.779-.456-.151a7.394 7.394 0 0 1-.926-.385l-.43-.21-2.688 1.257-1.286-1.275 1.239-2.695-.216-.43a7.551 7.551 0 0 1-.386-.926l-.155-.452-2.79-1.01-.005-1.81 2.777-1.03.152-.456a7.46 7.46 0 0 1 .384-.927l.212-.43L4.27 5.601l1.275-1.285 2.694 1.238.429-.215a7.612 7.612 0 0 1 .928-.385l.452-.156 1.01-2.789 1.81-.007 1.03 2.779.456.151a7.35 7.35 0 0 1 .925.385l.43.211L18.4 4.27l1.285 1.275-1.239 2.695.216.43a7.551 7.551 0 0 1 .386.926l.155.452 2.79 1.01.005 1.81-2.777 1.03-.152.456a7.46 7.46 0 0 1-.384.927l-.212.43zM12 7.2a4.8 4.8 0 1 0 4.8 4.8A4.8 4.8 0 0 0 12 7.2zm0 8.6a3.8 3.8 0 1 1 3.8-3.8 3.804 3.804 0 0 1-3.8 3.8z'/%3E%3C/svg%3E">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-dark: #1a1a1a;
+            --bg-medium: #242424;
+            --bg-light: #2e2e2e;
+            --bg-hover: #363636;
+            --border-color: #3a3a3a;
+            --border-light: #4a4a4a;
+            --accent: #ff9500;
+            --accent-hover: #e68a00;
+            --success: #ff9500;
+            --danger: #f44336;
+            --text-primary: #e0e0e0;
+            --text-secondary: #999;
+            --text-dim: #666;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+            --mod-width: 1024px;
+            --transition: all 0.2s ease;
+            --transition-long: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.5;
+            min-height: 100vh;
+        }
+
+        ::-webkit-scrollbar {
+            width: 12px;
+            height: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-dark);
+            border-left: 1px solid var(--border-color);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--bg-light);
+            border-left: 1px solid var(--border-color);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--bg-hover);
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px 100px;
+            position: relative;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to bottom, var(--bg-dark) 0%, var(--bg-dark) 80%, transparent 100%);
+            z-index: 100;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            pointer-events: none;
+        }
+
+        .header-content {
+            width: var(--mod-width);
+            max-width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            pointer-events: auto;
+        }
+
+        .save-indicator {
+            background: var(--bg-medium);
+            border: 1px solid var(--border-color);
+            padding: 8px 16px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+            opacity: 0;
+            transform: translateY(-10px);
+            pointer-events: none;
+        }
+
+        .save-indicator.has-changes {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+            cursor: pointer;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 1px var(--accent);
+        }
+
+        .save-indicator:hover.has-changes {
+            background: var(--bg-light);
+        }
+
+        .save-indicator .icon {
+            width: 16px;
+            height: 16px;
+            fill: var(--accent);
+        }
+
+        .mods-list {
+            width: var(--mod-width);
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+            position: relative;
+            margin-top: 60px;
+        }
+
+        .mod-item {
+            background: var(--bg-medium);
+            border: 1px solid var(--border-color);
+            transition: var(--transition-long);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mod-item:hover:not(.active) {
+            background: var(--bg-light);
+            border-color: var(--border-light);
+        }
+
+        .mod-item.active {
+            margin: 20px 0;
+            box-shadow: var(--shadow);
+            border-color: var(--border-light);
+            overflow: visible;
+        }
+
+        .mod-item.disabled {
+            opacity: 0.7;
+        }
+
+        .mod-item.error {
+            border-color: var(--danger);
+            position: relative;
+        }
+
+        .mod-item.error::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 24px 24px 0;
+            border-color: transparent var(--danger) transparent transparent;
+        }
+
+        .mod-item.error::after {
+            content: '!';
+            position: absolute;
+            top: 2px;
+            right: 6px;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .mod-header {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            gap: 12px;
+            cursor: pointer;
+            position: relative;
+            user-select: none;
+        }
+
+        .toggle-base {
+            position: relative;
+            background: var(--bg-light);
+            border: 1px solid var(--border-light);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .toggle-base::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            background: var(--text-secondary);
+            transition: var(--transition);
+        }
+
+        .toggle-base.checked {
+            background: var(--success);
+            border-color: var(--success);
+        }
+
+        .toggle-base.checked::after {
+            background: white;
+        }
+
+        .mod-toggle {
+            width: 40px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        .mod-toggle::after {
+            width: 14px;
+            height: 14px;
+        }
+
+        .mod-toggle.checked::after {
+            transform: translateX(20px);
+        }
+
+        .mod-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .mod-name {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-primary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .mod-chevron {
+            width: 20px;
+            height: 20px;
+            fill: var(--text-secondary);
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+
+        .mod-item.active .mod-chevron {
+            transform: rotate(180deg);
+        }
+
+        .mod-settings {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: var(--bg-dark);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .mod-item.active .mod-settings {
+            max-height: 2000px;
+            overflow: visible;
+        }
+
+        .settings-content {
+            padding: 20px 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            position: relative;
+            overflow: visible;
+        }
+
+        .settings-column {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .settings-column:only-child {
+            grid-column: 1 / 2;
+            max-width: 50%;
+        }
+
+        .settings-empty {
+            grid-column: 1 / -1;
+            padding: 20px;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            position: relative;
+        }
+
+        .control-label {
+            font-size: 13px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 8px;
+            line-height: 1.4;
+            min-height: 18px;
+            position: relative;
+            cursor: default;
+        }
+
+        .control-label-text {
+            flex: 1;
+            word-break: break-word;
+        }
+
+        .tooltip-wrapper {
+            position: relative;
+            display: inline-flex;
+            order: -1;
+            margin-right: 6px;
+        }
+
+        .tooltip-icon {
+            width: 14px;
+            height: 14px;
+            fill: var(--text-dim);
+            cursor: help;
+            flex-shrink: 0;
+            margin-top: 1px;
+            transition: var(--transition);
+        }
+
+        .tooltip-wrapper:hover .tooltip-icon {
+            fill: var(--accent);
+        }
+
+        .tooltip-content {
+            position: fixed;
+            background: rgba(26, 26, 26, 0.98);
+            border: 1px solid var(--accent);
+            padding: 10px 14px;
+            font-size: 12px;
+            line-height: 1.5;
+            min-width: 200px;
+            max-width: 320px;
+            width: max-content;
+            pointer-events: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s ease;
+            z-index: 10000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            word-wrap: break-word;
+            white-space: normal;
+        }
+
+        .tooltip-wrapper:hover .tooltip-content {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .tooltip-content b {
+            color: var(--accent);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .tooltip-content br {
+            display: block;
+            content: "";
+            margin: 4px 0;
+        }
+
+        .tooltip-content::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 6px;
+            border-color: transparent;
+        }
+
+        .toggle-control {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toggle-switch {
+            width: 36px;
+            height: 18px;
+            display: inline-block;
+        }
+
+        .toggle-switch input {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-switch::after {
+            width: 12px;
+            height: 12px;
+        }
+
+        .toggle-switch.checked::after {
+            transform: translateX(18px);
+        }
+
+        .input-base {
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 6px 10px;
+            font-size: 13px;
+            transition: var(--transition);
+            width: 100%;
+        }
+
+        .input-base:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: var(--bg-hover);
+        }
+
+        .input-base.changed {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 1px var(--accent);
+            background: var(--bg-hover);
+        }
+
+        .text-input {
+        }
+
+        .slider-container {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .slider {
+            width: 100%;
+            -webkit-appearance: none;
+            height: 4px;
+            background: var(--bg-light);
+            outline: none;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 14px;
+            height: 14px;
+            background: var(--accent);
+            cursor: pointer;
+            border: 2px solid var(--bg-dark);
+            transition: var(--transition);
+        }
+
+        .slider:hover::-webkit-slider-thumb {
+            background: var(--accent-hover);
+        }
+
+        .slider-value {
+            align-self: center;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-primary);
+            background: var(--bg-light);
+            padding: 2px 8px;
+            border-radius: 3px;
+            border: 1px solid var(--border-color);
+        }
+
+        .dropdown {
+            position: relative;
+            width: 100%;
+        }
+
+        .dropdown-toggle {
+            width: 100%;
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 6px 10px;
+            font-size: 13px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+            text-align: left;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .dropdown-toggle:hover {
+            border-color: var(--border-light);
+            background: var(--bg-hover);
+        }
+
+        .dropdown-arrow {
+            width: 12px;
+            height: 12px;
+            fill: var(--text-secondary);
+            flex-shrink: 0;
+            margin-left: 8px;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            left: 0;
+            right: 0;
+            background: var(--bg-medium);
+            border: 1px solid var(--border-light);
+            max-height: 200px;
+            overflow-y: auto;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: var(--transition);
+            z-index: 200;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .dropdown.dropup .dropdown-menu {
+            bottom: 100%;
+            top: auto;
+            border-bottom: none;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .dropdown:not(.dropup) .dropdown-menu {
+            top: 100%;
+            bottom: auto;
+            border-top: none;
+        }
+
+        .dropdown.open .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            padding: 6px 10px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 13px;
+            white-space: normal;
+            word-wrap: break-word;
+        }
+
+        .dropdown-item:hover {
+            background: var(--bg-light);
+        }
+
+        .color-picker {
+            display: flex;
+            gap: 8px;
+            align-items: stretch;
+        }
+
+        .color-preview {
+            width: 32px;
+            height: 28px;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .color-input {
+            flex: 1;
+            font-family: monospace;
+        }
+
+        .color-input.invalid {
+            border-color: var(--danger);
+            box-shadow: 0 0 0 1px var(--danger);
+            background: var(--bg-hover);
+        }
+
+        .hotkey-control {
+            position: relative;
+        }
+
+        .hotkey-input {
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 6px 10px;
+            font-size: 13px;
+            cursor: pointer;
+            text-align: center;
+            transition: var(--transition);
+            width: 100%;
+            user-select: none;
+            position: relative;
+        }
+
+        .hotkey-input:hover {
+            border-color: var(--border-light);
+            background: var(--bg-hover);
+        }
+
+        .hotkey-input.listening {
+            border-color: var(--accent);
+            background: var(--bg-hover);
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(255, 149, 0, 0.4); }
+            50% { box-shadow: 0 0 0 4px rgba(255, 149, 0, 0.2); }
+        }
+
+        .control-reset {
+            width: 20px;
+            height: 20px;
+            background: var(--bg-light);
+            border: 1px solid var(--border-light);
+            border-radius: 3px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.5;
+            transition: var(--transition);
+            z-index: 2;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .control-reset.has-value {
+            opacity: 0.7;
+            border-color: var(--accent);
+        }
+
+        .control-reset:hover {
+            opacity: 1;
+            background: var(--accent);
+            border-color: var(--accent);
+            transform: scale(1.1);
+        }
+
+        .control-reset:hover svg {
+            fill: white;
+        }
+
+        .control-reset svg {
+            width: 12px;
+            height: 12px;
+            fill: var(--text-secondary);
+            transition: var(--transition);
+        }
+
+        .control-reset.has-value svg {
+            fill: var(--accent);
+        }
+
+        .control-reset .reset-tooltip {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(26, 26, 26, 0.98);
+            border: 1px solid var(--accent);
+            padding: 6px 10px;
+            font-size: 11px;
+            line-height: 1.4;
+            white-space: nowrap;
+            pointer-events: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s ease;
+            z-index: 10001;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .control-reset:hover .reset-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .section-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 8px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .section-label:first-child {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+
+        .loading-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .loading-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--bg-light);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .icon-chevron {
+            width: 20px;
+            height: 20px;
+        }
+
+        .icon-info {
+            width: 14px;
+            height: 14px;
+        }
+
+        .icon-save {
+            width: 16px;
+            height: 16px;
+        }
+
+        @media (max-width: 800px) {
+            .settings-content {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .settings-column:only-child {
+                grid-column: 1;
+                max-width: 100%;
+            }
+        }
+
+        .mod-item:not(.active) .mod-settings {
+            display: none;
+        }
+
+        .mod-item.active .mod-settings {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="save-indicator" id="saveIndicator" onclick="saveAllSettings()">
+                <svg class="icon icon-save" viewBox="0 0 24 24">
+                    <path d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"/>
+                </svg>
+                <span>{{ gui_button{{ gui_buttonApply }} }}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="mods-list" id="modsList"></div>
+    </div>
+    
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <script>
+        const API_URL = 'http://127.0.0.1:31338';
+
+        let modsList = [];
+        let originalValues = {};
+        let hasUnsavedTextChanges = false;
+        let pendingTextChanges = {};
+        let autoSaveTimeout;
+
+        let keyListenerState = {
+            isListening: false,
+            currentElement: null,
+            pendingModifiers: [],
+            modifierTimeout: null,
+            blockContextMenuUntil: 0,
+            eventHandlers: {
+                globalKeyHandler: null,
+                globalKeyUpHandler: null,
+                globalMouseHandler: null,
+                globalContextHandler: null,
+                globalSelectionHandler: null,
+                windowBlurHandler: null,
+                windowKeyHandler: null,
+                windowKeyUpHandler: null
+            }
+        };
+
+        const KeyNames = {
+            "0": "NONE", "1": "ESC", "2": "1", "3": "2", "4": "3", "5": "4", "6": "5", "7": "6", "8": "7", "9": "8", 
+            "10": "9", "11": "0", "12": "MINUS", "13": "EQUALS", "14": "BACKSPACE", "15": "TAB",
+            "16": "Q", "17": "W", "18": "E", "19": "R", "20": "T", "21": "Y", "22": "U", "23": "I", "24": "O", "25": "P",
+            "26": "LBRACKET", "27": "RBRACKET", "28": "RETURN", "29": "LCONTROL", 
+            "30": "A", "31": "S", "32": "D", "33": "F", "34": "G", "35": "H", "36": "J", "37": "K", "38": "L",
+            "39": "SEMICOLON", "40": "APOSTROPHE", "41": "GRAVE", "42": "LSHIFT", "43": "BACKSLASH",
+            "44": "Z", "45": "X", "46": "C", "47": "V", "48": "B", "49": "N", "50": "M",
+            "51": "COMMA", "52": "PERIOD", "53": "SLASH", "54": "RSHIFT", "55": "NUMPADSTAR", "56": "LALT", 
+            "57": "SPACE", "58": "CAPSLOCK", "59": "F1", "60": "F2", "61": "F3", "62": "F4", "63": "F5",
+            "64": "F6", "65": "F7", "66": "F8", "67": "F9", "68": "F10", "69": "NUMLOCK", "70": "SCROLL",
+            "71": "NUMPAD7", "72": "NUMPAD8", "73": "NUMPAD9", "74": "NUMPADMINUS", "75": "NUMPAD4",
+            "76": "NUMPAD5", "77": "NUMPAD6", "78": "ADD", "79": "NUMPAD1", "80": "NUMPAD2", "81": "NUMPAD3",
+            "82": "NUMPAD0", "83": "NUMPADPERIOD", "86": "OEM_102", "87": "F11", "88": "F12",
+            "100": "F13", "101": "F14", "102": "F15", "156": "NUMPADENTER", "157": "RCONTROL", "184": "RALT",
+            "199": "HOME", "200": "UP", "201": "PGUP", "203": "LEFT", "205": "RIGHT", "207": "END",
+            "208": "DOWN", "209": "PGDN", "210": "INSERT", "211": "DELETE",
+            "256": "LEFTMOUSE", "257": "RIGHTMOUSE", "258": "MIDDLEMOUSE", "259": "MOUSE3", "260": "MOUSE4"
+        };
+
+        function findMod(modName) {
+            return modsList.find(m => m.name === modName);
+        }
+
+        function findWidget(mod, varName) {
+            let widget = null;
+            if (mod.template.column1) {
+                widget = mod.template.column1.find(w => w.varName === varName);
+            }
+            if (!widget && mod.template.column2) {
+                widget = mod.template.column2.find(w => w.varName === varName);
+            }
+            return widget;
+        }
+
+        function preventEvent(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+            if (window.event) {
+                window.event.returnValue = false;
+                window.event.cancelBubble = true;
+            }
+            return false;
+        }
+
+        function createControlHeader(text, tooltip, resetButton) {
+            return `<div class="control-label"><span class="control-label-text">${text || ''}</span>
+                <div style="display: flex; align-items: center; gap: 8px;">${tooltip || ''}${resetButton || ''}</div></div>`;
+        }
+
+        function autoSave(modName) {
+            if (autoSaveTimeout) {
+                clearTimeout(autoSaveTimeout);
+            }
+            
+            autoSaveTimeout = setTimeout(async () => {
+                const mod = findMod(modName);
+                if (mod) {
+                    try {
+                        await saveSettings(modName, mod.values);
+                        originalValues[modName] = JSON.parse(JSON.stringify(mod.values));
+                        updateSaveIndicator();
+                        
+                        const modItem = document.querySelector(`[data-mod-name="${modName}"]`);
+                        if (modItem) {
+                            modItem.style.borderColor = 'var(--accent)';
+                            setTimeout(() => {
+                                modItem.style.borderColor = '';
+                            }, 300);
+                        }
+                    } catch (error) {}
+                }
+            }, 500);
+        }
+
+        function hasChanges() {
+            if (hasUnsavedTextChanges && Object.keys(pendingTextChanges).length > 0) {
+                return true;
+            }
+            
+            for (const mod of modsList) {
+                const original = originalValues[mod.name];
+                if (!original) continue;
+                
+                for (const key in mod.values) {
+                    const currentValue = mod.values[key];
+                    const originalValue = original[key];
+                    
+                    if (JSON.stringify(currentValue) !== JSON.stringify(originalValue)) {
+                        return true;
+                    }
+                }
+            }
+            
+            return false;
+        }
+
+        function updateSaveIndicator() {
+            const indicator = document.getElementById('saveIndicator');
+            indicator.classList.toggle('has-changes', hasChanges());
+        }
+
+        function setLoading(isLoading) {
+            const overlay = document.getElementById('loadingOverlay');
+            overlay.classList.toggle('active', isLoading);
+        }
+
+        async function fetchConfig() {
+            try {
+                setLoading(true);
+                
+                const response = await fetch(`${API_URL}/config`);
+                const data = await response.json();
+                
+                data.forEach(mod => {
+                    originalValues[mod.name] = JSON.parse(JSON.stringify(mod.values));
+                });
+                
+                return data;
+            } catch (error) {
+                return [];
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        async function saveSettings(modName, values) {
+            try {
+                await fetch(`${API_URL}/save`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ mod: modName, values })
+                });
+            } catch (error) {
+                throw error;
+            }
+        }
+
+        async function toggleMod(modName, enabled) {
+            try {
+                await fetch(`${API_URL}/enable`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ mod: modName, enabled })
+                });
+            } catch (error) {}
+        }
+
+        function createModItem(mod) {
+            if (!mod || !mod.name) throw new Error('Invalid mod data');
+            
+            const item = document.createElement('div');
+            const isEnabled = (mod && mod.values && mod.values.enabled !== undefined && mod.values.enabled !== null) ? mod.values.enabled : true;
+            item.className = `mod-item ${isEnabled ? 'enabled' : 'disabled'}`;
+            item.dataset.modName = mod.name;
+            
+            const header = document.createElement('div');
+            header.className = 'mod-header';
+            
+            const displayName = (mod && mod.template && mod.template.modDisplayName) ? mod.template.modDisplayName : mod.name;
+            
+            header.innerHTML = `
+                <div class="mod-toggle toggle-base ${isEnabled ? 'checked' : ''}" 
+                     onclick="event.stopPropagation(); handleModToggle('${mod.name}', !this.classList.contains('checked'))"></div>
+                <div class="mod-info">
+                    <div class="mod-name">${displayName}</div>
+                </div>
+                <svg class="mod-chevron icon-chevron" viewBox="0 0 24 24">
+                    <path d="M7 10l5 5 5-5z"/>
+                </svg>
+            `;
+            
+            header.onclick = () => toggleModPanel(mod.name);
+            
+            const settings = document.createElement('div');
+            settings.className = 'mod-settings';
+            
+            const content = document.createElement('div');
+            content.className = 'settings-content';
+            
+            const columns = [];
+            ['column1', 'column2'].forEach(colName => {
+                if (mod && mod.template && mod.template[colName] && mod.template[colName].length) {
+                    const column = document.createElement('div');
+                    column.className = 'settings-column';
+                    
+                    mod.template[colName].forEach(widget => {
+                        const control = createControl(mod.name, widget, mod.values || {});
+                        if (control) column.appendChild(control);
+                    });
+                    
+                    if (column.children.length > 0) {
+                        columns.push(column);
+                    }
+                }
+            });
+            
+            if (columns.length === 0) {
+                const emptyState = document.createElement('div');
+                emptyState.className = 'settings-empty';
+                emptyState.innerHTML = '⚙️';
+                content.appendChild(emptyState);
+            } else {
+                columns.forEach(col => content.appendChild(col));
+            }
+            
+            settings.appendChild(content);
+            item.appendChild(header);
+            item.appendChild(settings);
+            
+            return item;
+        }
+
+        function createControl(modName, widget, values) {
+            if (!widget || !widget.type) return null;
+            
+            const group = document.createElement('div');
+            group.className = 'control-group';
+            
+            const currentValue = widget.varName ?
+                ((values && values[widget.varName] !== undefined && values[widget.varName] !== null) ? values[widget.varName] : widget.value)
+                : widget.value;
+            
+            switch (widget.type) {
+                    case 'CheckBox':
+                        const checkboxId = `checkbox_${modName}_${widget.varName}`;
+                        group.innerHTML = `
+                            ${createControlHeader(widget.text, widget.tooltip ? createTooltip(widget.tooltip) : '', 
+                                widget.defaultValue !== undefined ? createResetButton(modName, widget.varName, currentValue !== widget.defaultValue, widget.defaultValue) : '')}
+                            <div class="toggle-control">
+                                <label class="toggle-switch toggle-base ${currentValue ? 'checked' : ''}">
+                                    <input type="checkbox" id="${checkboxId}" ${currentValue ? 'checked' : ''} 
+                                           onchange="handleCheckboxChange('${modName}', '${widget.varName}', this)">
+                                </label>
+                            </div>
+                        `;
+                        break;
+                        
+                    case 'Slider':
+                        const min = widget.minimum || 0;
+                        const max = widget.maximum || 100;
+                        const step = widget.snapInterval || 1;
+                        const format = widget.format || '{{value}}';
+                        const sliderId = `slider_${modName}_${widget.varName}`;
+                        group.innerHTML = `
+                            ${createControlHeader(widget.text, widget.tooltip ? createTooltip(widget.tooltip) : '', 
+                                widget.defaultValue !== undefined ? createResetButton(modName, widget.varName, currentValue !== widget.defaultValue, widget.defaultValue) : '')}
+                            <div class="slider-container">
+                                <input type="range" class="slider" id="${sliderId}"
+                                       min="${min}" max="${max}" 
+                                       step="${step}" value="${currentValue || min}"
+                                       oninput="updateSlider('${modName}', '${widget.varName}', this.value, '${format}')">
+                                <span class="slider-value">${formatSliderValue(currentValue || min, format)}</span>
+                            </div>
+                        `;
+                        break;
+                        
+                    case 'Dropdown':
+                        const options = widget.options || [];
+                        const selectedIndex = currentValue !== undefined ? currentValue : 0;
+                        const currentOption = options[selectedIndex] || options[0] || { label: 'N/A' };
+                        group.innerHTML = `
+                            ${createControlHeader(widget.text, widget.tooltip ? createTooltip(widget.tooltip) : '', 
+                                widget.defaultValue !== undefined ? createResetButton(modName, widget.varName, currentValue !== widget.defaultValue, widget.defaultValue) : '')}
+                            <div class="dropdown" id="dropdown_${modName}_${widget.varName}">
+                                <div class="dropdown-toggle" onclick="toggleDropdown('${modName}', '${widget.varName}')">
+                                    <span>${stripHtml(currentOption.label)}</span>
+                                    <svg class="dropdown-arrow" viewBox="0 0 24 24">
+                                        <path d="M7 10l5 5 5-5z"/>
+                                    </svg>
+                                </div>
+                                <div class="dropdown-menu">
+                                    ${options.map((opt, idx) => `
+                                        <div class="dropdown-item" onclick="selectDropdownItem('${modName}', '${widget.varName}', ${idx})">
+                                            ${opt.label || 'Option ' + idx}
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        `;
+                        break;
+                        
+                    case 'TextInput':
+                        const textId = `text_${modName}_${widget.varName}`;
+                        group.innerHTML = `
+                            ${createControlHeader(widget.text, widget.tooltip ? createTooltip(widget.tooltip) : '', 
+                                widget.defaultValue !== undefined ? createResetButton(modName, widget.varName, currentValue !== widget.defaultValue, widget.defaultValue) : '')}
+                            <input type="text" class="text-input input-base" id="${textId}" value="${currentValue || ''}"
+                                   oninput="handleTextInput('${modName}', '${widget.varName}', this)"
+                                   onblur="handleTextBlur('${modName}', '${widget.varName}', this)"
+                                   onfocus="handleTextFocus('${modName}', '${widget.varName}', this)">
+                        `;
+                        break;
+                        
+                    case 'ColorHEX':
+                    case 'ColorHEXA':
+                        const colorValue = currentValue || '#000000';
+                        const colorId = `color_${modName}_${widget.varName}`;
+                        const includeAlpha = widget.type === 'ColorHEXA';
+                        group.innerHTML = `
+                            ${createControlHeader(widget.text, widget.tooltip ? createTooltip(widget.tooltip) : '', 
+                                widget.defaultValue !== undefined ? createResetButton(modName, widget.varName, currentValue !== widget.defaultValue, widget.defaultValue) : '')}
+                            <div class="color-picker">
+                                <input type="color" id="${colorId}_picker" value="${colorValue.substr(0, 7)}" 
+                                       style="position: absolute; opacity: 0; pointer-events: none;"
+                                       onchange="updateColorFromPicker('${modName}', '${widget.varName}', this.value, ${includeAlpha})"
+                                       oninput="updateColorFromPicker('${modName}', '${widget.varName}', this.value, ${includeAlpha})">
+                                <div class="color-preview" style="background: ${colorValue}"
+                                     onclick="document.getElementById('${colorId}_picker').click()"></div>
+                                <input type="text" class="color-input input-base" id="${colorId}" value="${colorValue}"
+                                       pattern="^#[0-9A-Fa-f]{6}${includeAlpha ? '[0-9A-Fa-f]{2}?' : ''}$"
+                                       oninput="handleColorInput('${modName}', '${widget.varName}', this)"
+                                       onblur="handleColorBlur('${modName}', '${widget.varName}', this)">
+                            </div>
+                        `;
+                        break;
+                        
+                    case 'HotKey':
+                        const keyName = getKeyName(currentValue || []);
+                        const hotkeyId = `hotkey_${modName}_${widget.varName}`;
+                        group.innerHTML = `
+                            ${createControlHeader(widget.text, widget.tooltip ? createTooltip(widget.tooltip) : '', 
+                                widget.defaultValue !== undefined ? createResetButton(modName, widget.varName, 
+                                    JSON.stringify(currentValue) !== JSON.stringify(widget.defaultValue), widget.defaultValue) : '')}
+                            <div class="hotkey-control">
+                                <div class="hotkey-input" id="${hotkeyId}" onclick="startKeyListening('${modName}', '${widget.varName}', this)">
+                                    ${keyName}
+                                </div>
+                            </div>
+                        `;
+                        break;
+                        
+                    case 'Label':
+                        group.className = 'section-label';
+                        group.innerHTML = widget.text || '';
+                        break;
+                        
+                    default:
+                        return null;
+                }
+                
+                return group;
+            }
+
+        function createResetButton(modName, varName, hasValue, defaultValue) {
+            const defaultText = typeof defaultValue === 'boolean' ? 
+                (defaultValue ? 'true' : 'false') : 
+                Array.isArray(defaultValue) ? 
+                    getKeyName(defaultValue) : 
+                    String(defaultValue);
+            
+            return `<div class="control-reset ${hasValue ? 'has-value' : ''}" onclick="resetToDefault('${modName}', '${varName}')">
+                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-9.95 9h2.02a8 8 0 1 1 .21 3.6l-1.42 1.42A9.969 9.969 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 2a8 8 0 0 1 8 8h-2a6 6 0 1 0-1.76 4.24l1.42 1.42A8 8 0 0 1 12 4z"/></svg>
+                <div class="reset-tooltip"><b>{{ web_resetToDefault }}</b> ${defaultText}</div></div>`;
+        }
+
+        function createTooltip(text) {
+            text = text.replace(/{HEADER}/g, '<b>').replace(/{\/HEADER}/g, '</b>')
+                      .replace(/{BODY}/g, '').replace(/{\/BODY}/g, '')
+                      .replace(/<br\/?>/g, '<br>').replace(/<img[^>]+>/g, '') 
+                      .replace(/img:\/\/[^<\s]+/g, '');
+            
+            return `<div class="tooltip-wrapper" onmouseenter="positionTooltip(this)" onmouseleave="hideTooltip(this)">
+                <svg class="tooltip-icon icon-info" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                <div class="tooltip-content">${text}</div></div>`;
+        }
+
+        function positionTooltip(wrapper) {
+            const tooltip = wrapper.querySelector('.tooltip-content');
+            const rect = wrapper.getBoundingClientRect();
+            const tooltipRect = tooltip.getBoundingClientRect();
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+            
+            let left = rect.left + rect.width / 2 - tooltipRect.width / 2;
+            let top = rect.top - tooltipRect.height - 8;
+            
+            if (left < 10) {
+                left = 10;
+            } else if (left + tooltipRect.width > viewportWidth - 10) {
+                left = viewportWidth - tooltipRect.width - 10;
+            }
+            
+            if (top < 10) {
+                top = rect.bottom + 8;
+            }
+            
+            tooltip.style.left = left + 'px';
+            tooltip.style.top = top + 'px';
+        }
+
+        function hideTooltip(wrapper) {
+            const tooltip = wrapper.querySelector('.tooltip-content');
+            tooltip.style.left = '';
+            tooltip.style.top = '';
+        }
+
+        function stripHtml(html) {
+            if (!html) return '';
+            const tmp = document.createElement('div');
+            tmp.innerHTML = html;
+            return tmp.textContent || tmp.innerText || '';
+        }
+
+        function formatSliderValue(value, format) {
+            return format ? format.replace('{{value}}', value) : value;
+        }
+
+        function getKeyName(keyData) {
+            if (!keyData || keyData.length === 0) return 'None';
+            
+            const keys = [];
+            
+            keyData.forEach(item => {
+                if (Array.isArray(item)) {
+                    if (item.includes(56) || item.includes(184)) {
+                        if (!keys.includes("Alt")) keys.push("Alt");
+                    }
+                    else if (item.includes(42) || item.includes(54)) {
+                        if (!keys.includes("Shift")) keys.push("Shift");
+                    }
+                    else if (item.includes(29) || item.includes(157)) {
+                        if (!keys.includes("Ctrl")) keys.push("Ctrl");
+                    }
+                }
+            });
+            
+            keyData.forEach(item => {
+                if (!Array.isArray(item) && item !== undefined) {
+                    const keyName = KeyNames[item.toString()];
+                    if (keyName && keyName !== 'NONE') {
+                        keys.push(keyName);
+                    }
+                }
+            });
+            
+            return keys.length > 0 ? keys.join(' + ') : 'None';
+        }
+
+        function handleTextFocus(modName, varName, element) {
+            if (hasUnsavedTextChanges && !pendingTextChanges[`${modName}_${varName}`]) {
+                element.blur();
+                
+                const warning = document.createElement('div');
+                warning.style.cssText = `
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: var(--bg-medium);
+                    border: 2px solid var(--accent);
+                    padding: 20px;
+                    z-index: 10002;
+                    text-align: center;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+                `;
+                warning.innerHTML = `
+                    <div style="margin-bottom: 16px; color: var(--text-primary);">
+                        You have unsaved changes in other text fields.<br>
+                        Please save or reset them first.
+                    </div>
+                    <button onclick="this.parentElement.remove()" 
+                            style="background: var(--accent); color: white; border: none; padding: 8px 16px; cursor: pointer;">
+                        {{ gui_buttonOK }}
+                    </button>
+                `;
+                document.body.appendChild(warning);
+                
+                setTimeout(() => {
+                    if (warning.parentElement) {
+                        warning.remove();
+                    }
+                }, 5000);
+                
+                return;
+            }
+        }
+
+        function handleTextInput(modName, varName, element) {
+            element.classList.add('changed');
+            const key = `${modName}_${varName}`;
+            pendingTextChanges[key] = element.value;
+            hasUnsavedTextChanges = true;
+            updateValue(modName, varName, element.value, true);
+        }
+
+        function handleTextBlur(modName, varName, element) {
+        }
+
+        function handleColorInput(modName, varName, element) {
+            const value = element.value;
+            const isHexA = element.pattern.includes('[0-9A-Fa-f]{2}?');
+            const pattern = isHexA ? /^#[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?$/i : /^#[0-9A-Fa-f]{6}$/i;
+            
+            let filteredValue = value;
+            if (value.length === 0 || value[0] !== '#') {
+                filteredValue = '#' + value.replace(/[^0-9A-Fa-f]/g, '');
+            } else {
+                filteredValue = '#' + value.substring(1).replace(/[^0-9A-Fa-f]/g, '');
+            }
+            
+            const maxLength = isHexA ? 9 : 7;
+            if (filteredValue.length > maxLength) {
+                filteredValue = filteredValue.substring(0, maxLength);
+            }
+            
+            if (filteredValue !== value) {
+                element.value = filteredValue;
+            }
+            
+            const originalValue = originalValues[modName] ? originalValues[modName][varName] : '';
+            const hasChanged = filteredValue.toUpperCase() !== (originalValue || '').toUpperCase();
+            
+            if (pattern.test(filteredValue) && filteredValue.length >= 7) {
+                element.classList.remove('invalid');
+                element.classList.toggle('changed', hasChanged);
+                
+                const preview = element.previousElementSibling.previousElementSibling;
+                if (preview && preview.classList.contains('color-preview')) {
+                    preview.style.background = filteredValue;
+                }
+                
+                const mod = findMod(modName);
+                if (mod) {
+                    mod.values[varName] = filteredValue.toUpperCase();
+                    updateResetButton(modName, varName);
+                }
+            } else {
+                element.classList.add('invalid');
+                element.classList.remove('changed');
+            }
+        }
+
+        function handleColorBlur(modName, varName, element) {
+            const value = element.value;
+            const isHexA = element.pattern.includes('[0-9A-Fa-f]{2}?');
+            const pattern = isHexA ? /^#[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?$/i : /^#[0-9A-Fa-f]{6}$/i;
+            
+            if (pattern.test(value) && value.length >= 7) {
+                element.classList.remove('changed');
+                saveSpecificSetting(modName, varName, value.toUpperCase());
+            } else {
+                const originalValue = originalValues[modName] ? originalValues[modName][varName] : '#000000';
+                element.value = originalValue;
+                element.classList.remove('invalid', 'changed');
+                
+                const preview = element.previousElementSibling.previousElementSibling;
+                if (preview && preview.classList.contains('color-preview')) {
+                    preview.style.background = originalValue;
+                }
+            }
+        }
+
+        function handleCheckboxChange(modName, varName, element) {
+            const isChecked = element.checked;
+            const toggle = element.parentElement;
+            toggle.classList.toggle('checked', isChecked);
+            updateValue(modName, varName, isChecked);
+        }
+
+        function toggleModPanel(modName) {
+            try {
+                const modItem = document.querySelector(`[data-mod-name="${modName}"]`);
+                if (!modItem || modItem.classList.contains('error')) return;
+                
+                const isOpen = modItem.classList.contains('active');
+                
+                document.querySelectorAll('.mod-item.active').forEach(item => {
+                    if (item !== modItem) {
+                        item.classList.remove('active');
+                    }
+                });
+                
+                if (isOpen) {
+                    modItem.classList.remove('active');
+                } else {
+                    modItem.classList.add('active');
+                    
+                    setTimeout(() => {
+                        const rect = modItem.getBoundingClientRect();
+                        const viewHeight = window.innerHeight;
+                        const modHeight = rect.height;
+                        
+                        if (modHeight > viewHeight - 100 || rect.top < 60 || rect.bottom > viewHeight) {
+                            const scrollTop = window.pageYOffset + rect.top - 80;
+                            window.scrollTo({ top: scrollTop, behavior: 'smooth' });
+                        }
+                    }, 300);
+                }
+            } catch (error) {}
+        }
+
+        function handleModToggle(modName, enabled) {
+            try {
+                const mod = findMod(modName);
+                if (mod) {
+                    if (!mod.values) {
+                        mod.values = {};
+                    }
+                    
+                    mod.values.enabled = enabled;
+                    
+                    const modItem = document.querySelector(`[data-mod-name="${modName}"]`);
+                    if (modItem) {
+                        modItem.classList.toggle('enabled', enabled);
+                        modItem.classList.toggle('disabled', !enabled);
+                        const toggle = modItem.querySelector('.mod-toggle');
+                        if (toggle) {
+                            toggle.classList.toggle('checked', enabled);
+                        }
+                    }
+                    
+                    toggleMod(modName, enabled);
+                    saveSpecificSetting(modName, 'enabled', enabled);
+                }
+            } catch (error) {}
+        }
+
+        function updateValue(modName, varName, value, isTextInput = false) {
+            const mod = findMod(modName);
+            if (mod) {
+                mod.values[varName] = value;
+                if (isTextInput) {
+                    updateSaveIndicator();
+                }
+                updateResetButton(modName, varName);
+                
+                if (!isTextInput) {
+                    saveSpecificSetting(modName, varName, value);
+                }
+            }
+        }
+
+        function updateSlider(modName, varName, value, format) {
+            updateValue(modName, varName, parseFloat(value));
+            const container = event.target.parentElement;
+            const valueDisplay = container.querySelector('.slider-value');
+            valueDisplay.textContent = formatSliderValue(value, format);
+        }
+
+        function updateColorFromPicker(modName, varName, value, includeAlpha) {
+            const mod = findMod(modName);
+            if (!mod) return;
+            
+            let finalValue = value.toUpperCase();
+            
+            if (includeAlpha && mod.values[varName] && mod.values[varName].length === 9) {
+                finalValue += mod.values[varName].substr(7, 2);
+            }
+            
+            updateValue(modName, varName, finalValue);
+            
+            const colorInput = document.getElementById(`color_${modName}_${varName}`);
+            const preview = document.getElementById(`color_${modName}_${varName}_picker`).nextElementSibling;
+            
+            if (colorInput) {
+                colorInput.value = finalValue;
+                colorInput.classList.remove('changed', 'invalid');
+            }
+            
+            if (preview) {
+                preview.style.background = finalValue;
+            }
+        }
+
+        function toggleDropdown(modName, varName) {
+            const dropdown = document.getElementById(`dropdown_${modName}_${varName}`);
+            const isOpen = dropdown.classList.contains('open');
+            
+            document.querySelectorAll('.dropdown').forEach(d => {
+                if (d !== dropdown) {
+                    d.classList.remove('open');
+                    d.classList.remove('dropup');
+                }
+            });
+            
+            if (!isOpen) {
+                const rect = dropdown.getBoundingClientRect();
+                const spaceBelow = window.innerHeight - rect.bottom;
+                const spaceAbove = rect.top;
+                
+                if (spaceBelow < 250 && spaceAbove > spaceBelow) {
+                    dropdown.classList.add('dropup');
+                } else {
+                    dropdown.classList.remove('dropup');
+                }
+                
+                dropdown.classList.add('open');
+                
+                const modItem = dropdown.closest('.mod-item');
+                if (modItem && modItem.classList.contains('active')) {
+                    const settings = modItem.querySelector('.mod-settings');
+                    const currentHeight = settings.scrollHeight;
+                    settings.style.maxHeight = (currentHeight + 220) + 'px';
+                    
+                    setTimeout(() => {
+                        if (!dropdown.classList.contains('open') && settings.style.maxHeight) {
+                            settings.style.maxHeight = '2000px';
+                        }
+                    }, 300);
+                }
+            } else {
+                dropdown.classList.remove('open');
+                dropdown.classList.remove('dropup');
+                
+                const modItem = dropdown.closest('.mod-item');
+                if (modItem && modItem.classList.contains('active')) {
+                    const settings = modItem.querySelector('.mod-settings');
+                    settings.style.maxHeight = '2000px';
+                }
+            }
+        }
+
+        function selectDropdownItem(modName, varName, index) {
+            try {
+                const mod = findMod(modName);
+                if (mod && mod.values) {
+                    mod.values[varName] = index;
+                    updateResetButton(modName, varName);
+                    
+                    const dropdown = document.getElementById(`dropdown_${modName}_${varName}`);
+                    if (!dropdown) return;
+                    
+                    const toggle = dropdown.querySelector('.dropdown-toggle span:first-child');
+                    if (!toggle) return;
+                    
+                    const widget = findWidget(mod, varName);
+                    
+                    if (widget && widget.options && widget.options[index]) {
+                        toggle.innerHTML = stripHtml(widget.options[index].label);
+                    }
+                    
+                    dropdown.classList.remove('open');
+                    dropdown.classList.remove('dropup');
+                    
+                    const modItem = dropdown.closest('.mod-item');
+                    if (modItem && modItem.classList.contains('active')) {
+                        const settings = modItem.querySelector('.mod-settings');
+                        settings.style.maxHeight = '2000px';
+                    }
+                    
+                    saveSpecificSetting(modName, varName, index);
+                }
+            } catch (error) {}
+        }
+
+        function cancelKeyListening() {
+            if (!keyListenerState.isListening) return;
+            
+            keyListenerState.isListening = false;
+            
+            if (keyListenerState.currentElement) {
+                keyListenerState.currentElement.classList.remove('listening');
+                
+                const container = keyListenerState.currentElement.closest('[data-mod-name]');
+                const modName = container ? container.dataset.modName : undefined;
+                const varName = keyListenerState.currentElement.id.split('_').pop();
+                const mod = findMod(modName);
+                const modValue = (mod && mod.values) ? mod.values[varName] : null;
+                
+                keyListenerState.currentElement.textContent = modValue ? 
+                    getKeyName(mod.values[varName]) : 'None';
+            }
+            
+            if (keyListenerState.modifierTimeout) {
+                clearTimeout(keyListenerState.modifierTimeout);
+                keyListenerState.modifierTimeout = null;
+            }
+            
+            const handlers = keyListenerState.eventHandlers;
+            const removeOptions = { capture: true };
+            
+            Object.entries(handlers).forEach(([key, handler]) => {
+                if (!handler) return;
+                
+                const events = {
+                    globalKeyHandler: ['keydown', 'keyup'],
+                    globalKeyUpHandler: ['keyup'],
+                    globalMouseHandler: ['mousedown', 'mouseup', 'click'],
+                    globalContextHandler: ['contextmenu'],
+                    globalSelectionHandler: ['selectstart'],
+                    windowBlurHandler: ['blur'],
+                    windowKeyHandler: ['keydown'],
+                    windowKeyUpHandler: ['keyup']
+                };
+                
+                const targets = key.startsWith('window') ? [window] : 
+                    [document, window, document.body, document.documentElement];
+                
+                const eventList = events[key];
+                if (eventList) {
+                    eventList.forEach(eventType => {
+                        targets.forEach(target => {
+                            target.removeEventListener(eventType, handler, 
+                                key === 'windowBlurHandler' ? undefined : removeOptions);
+                        });
+                    });
+                }
+            });
+            
+            keyListenerState.currentElement = null;
+            keyListenerState.pendingModifiers = [];
+            keyListenerState.eventHandlers = {
+                globalKeyHandler: null,
+                globalKeyUpHandler: null,
+                globalMouseHandler: null,
+                globalContextHandler: null,
+                globalSelectionHandler: null,
+                windowBlurHandler: null,
+                windowKeyHandler: null,
+                windowKeyUpHandler: null
+            };
+        }
+
+        async function startKeyListening(modName, varName, element) {
+            if (keyListenerState.isListening) {
+                cancelKeyListening();
+            }
+            
+            keyListenerState.isListening = true;
+            keyListenerState.currentElement = element;
+            keyListenerState.pendingModifiers = [];
+            
+            element.classList.add('listening');
+            element.textContent = 'Press key (ESC to cancel)';
+            
+            const timeoutId = setTimeout(cancelKeyListening, 10000);
+            
+            const globalKeyHandler = (e) => {
+                if (e.code === 'Escape' || e.key === 'Escape') {
+                    preventEvent(e);
+                    cancelKeyListening();
+                    return false;
+                }
+                
+                preventEvent(e);
+                Object.defineProperty(e, 'defaultPrevented', { value: true, writable: false });
+                
+                const result = processKeyCombination(e, modName, varName);
+                if (result) {
+                    setTimeout(() => {
+                        finishKeyListening(modName, varName, result);
+                    }, 0);
+                }
+                
+                return false;
+            };
+
+            const globalKeyUpHandler = (e) => {
+                if (e.code === 'Escape' || e.key === 'Escape') {
+                    return false;
+                }
+                
+                preventEvent(e);
+                
+                const result = processKeyCombination(e, modName, varName);
+                if (result) {
+                    setTimeout(() => finishKeyListening(modName, varName, result), 0);
+                }
+                
+                return false;
+            };
+            
+            const globalMouseHandler = (e) => {
+                preventEvent(e);
+                
+                if (e.type === 'mousedown') {
+                    const result = processMouseCombination(e, modName, varName);
+                    if (result) {
+                        if (e.button === 2) {
+                            keyListenerState.blockContextMenuUntil = Date.now() + 1000;
+                        }
+                        finishKeyListening(modName, varName, result);
+                    }
+                }
+                
+                return false;
+            };
+            
+            const createKeyHandler = (action) => (e) => {
+                if (!keyListenerState.isListening || e.code === 'Escape' || e.key === 'Escape') return;
+                
+                const result = processKeyCombination(e, modName, varName);
+                if (result) {
+                    setTimeout(() => action(modName, varName, result), 0);
+                    if (action === finishKeyListening) {
+                        setTimeout(() => keyListenerState.isListening && finishKeyListening(modName, varName, result), 10);
+                        setTimeout(() => keyListenerState.isListening && finishKeyListening(modName, varName, result), 50);
+                    }
+                }
+                
+                preventEvent(e);
+                return false;
+            };
+            
+            const windowKeyHandler = createKeyHandler(finishKeyListening);
+            const windowKeyUpHandler = createKeyHandler((modName, varName, result) => {
+                if (keyListenerState.isListening) {
+                    finishKeyListening(modName, varName, result);
+                }
+            });
+            const globalContextHandler = (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                e.stopImmediatePropagation();
+                return false;
+            };
+            
+            const globalSelectionHandler = (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            };
+            
+            const windowBlurHandler = () => {
+                cancelKeyListening();
+            };
+            
+            keyListenerState.eventHandlers = {
+                globalKeyHandler,
+                globalKeyUpHandler,
+                globalMouseHandler,
+                globalContextHandler,
+                globalSelectionHandler,
+                windowBlurHandler,
+                windowKeyHandler,
+                windowKeyUpHandler
+            };
+            
+            window.addEventListener('keydown', windowKeyHandler, { capture: true, passive: false });
+            window.addEventListener('keyup', windowKeyUpHandler, { capture: true, passive: false });
+            
+            document.addEventListener('keydown', globalKeyHandler, { capture: true, passive: false });
+            document.addEventListener('keyup', globalKeyUpHandler, { capture: true, passive: false });
+            document.addEventListener('mousedown', globalMouseHandler, { capture: true, passive: false });
+            document.addEventListener('mouseup', globalMouseHandler, { capture: true, passive: false });
+            document.addEventListener('click', globalMouseHandler, { capture: true, passive: false });
+            document.addEventListener('contextmenu', globalContextHandler, { capture: true, passive: false });
+            document.addEventListener('selectstart', globalSelectionHandler, { capture: true, passive: false });
+            window.addEventListener('blur', windowBlurHandler);
+            
+            window.addEventListener('keydown', globalKeyHandler, { capture: true, passive: false });
+            window.addEventListener('keyup', globalKeyUpHandler, { capture: true, passive: false });
+            window.addEventListener('contextmenu', globalContextHandler, { capture: true, passive: false });
+            window.addEventListener('selectstart', globalSelectionHandler, { capture: true, passive: false });
+            
+            document.body.addEventListener('keydown', globalKeyHandler, { capture: true, passive: false });
+            document.body.addEventListener('keyup', globalKeyUpHandler, { capture: true, passive: false });
+            
+            document.documentElement.addEventListener('keydown', globalKeyHandler, { capture: true, passive: false });
+            document.documentElement.addEventListener('keyup', globalKeyUpHandler, { capture: true, passive: false });
+        }
+
+        function processKeyCombination(e, modName, varName) {
+            try {
+                const keyMap = {
+                    'Escape': 1, 'Digit1': 2, 'Digit2': 3, 'Digit3': 4, 'Digit4': 5, 'Digit5': 6, 'Digit6': 7, 'Digit7': 8, 'Digit8': 9, 'Digit9': 10, 'Digit0': 11,
+                    'Minus': 12, 'Equal': 13, 'Backspace': 14, 'Tab': 15,
+                    'KeyQ': 16, 'KeyW': 17, 'KeyE': 18, 'KeyR': 19, 'KeyT': 20, 'KeyY': 21, 'KeyU': 22, 'KeyI': 23, 'KeyO': 24, 'KeyP': 25,
+                    'BracketLeft': 26, 'BracketRight': 27, 'Enter': 28, 'ControlLeft': 29,
+                    'KeyA': 30, 'KeyS': 31, 'KeyD': 32, 'KeyF': 33, 'KeyG': 34, 'KeyH': 35, 'KeyJ': 36, 'KeyK': 37, 'KeyL': 38,
+                    'Semicolon': 39, 'Quote': 40, 'Backquote': 41, 'ShiftLeft': 42, 'Backslash': 43,
+                    'KeyZ': 44, 'KeyX': 45, 'KeyC': 46, 'KeyV': 47, 'KeyB': 48, 'KeyN': 49, 'KeyM': 50,
+                    'Comma': 51, 'Period': 52, 'Slash': 53, 'ShiftRight': 54, 'NumpadMultiply': 55, 'AltLeft': 56,
+                    'Space': 57, 'CapsLock': 58, 'F1': 59, 'F2': 60, 'F3': 61, 'F4': 62, 'F5': 63,
+                    'F6': 64, 'F7': 65, 'F8': 66, 'F9': 67, 'F10': 68, 'NumLock': 69, 'ScrollLock': 70,
+                    'Numpad7': 71, 'Numpad8': 72, 'Numpad9': 73, 'NumpadSubtract': 74, 'Numpad4': 75,
+                    'Numpad5': 76, 'Numpad6': 77, 'NumpadAdd': 78, 'Numpad1': 79, 'Numpad2': 80, 'Numpad3': 81,
+                    'Numpad0': 82, 'NumpadDecimal': 83, 'F11': 87, 'F12': 88,
+                    'F13': 100, 'F14': 101, 'F15': 102, 'NumpadEnter': 156, 'ControlRight': 157, 'AltRight': 184,
+                    'Home': 199, 'ArrowUp': 200, 'PageUp': 201, 'ArrowLeft': 203, 'ArrowRight': 205,
+                    'End': 207, 'ArrowDown': 208, 'PageDown': 209, 'Insert': 210, 'Delete': 211
+                };
+                
+                const keyCode = keyMap[e.code];
+                if (!keyCode) return null;
+                
+                const modifierKeys = ['ControlLeft', 'ControlRight', 'AltLeft', 'AltRight', 'ShiftLeft', 'ShiftRight'];
+                const isModifierKey = modifierKeys.includes(e.code);
+                
+                if (isModifierKey) {
+                    const modifierMap = {
+                        'ControlLeft': [29, 157], 'ControlRight': [29, 157],
+                        'AltLeft': [56, 184], 'AltRight': [56, 184],
+                        'ShiftLeft': [42, 54], 'ShiftRight': [42, 54]
+                    };
+                    
+                    const modifierArray = modifierMap[e.code];
+                    if (modifierArray && !keyListenerState.pendingModifiers.some(mod => 
+                        JSON.stringify(mod) === JSON.stringify(modifierArray))) {
+                        keyListenerState.pendingModifiers.push(modifierArray);
+                    }
+                    
+                    if (keyListenerState.modifierTimeout) {
+                        clearTimeout(keyListenerState.modifierTimeout);
+                    }
+                    keyListenerState.modifierTimeout = setTimeout(() => {
+                        if (keyListenerState.pendingModifiers.length > 0) {
+                            finishKeyListening(modName, varName, [...keyListenerState.pendingModifiers]);
+                        }
+                    }, 500);
+                    
+                    return null;
+                }
+                
+                const newKey = [keyCode];
+                
+                keyListenerState.pendingModifiers.forEach(modifier => {
+                    if (!newKey.includes(modifier)) {
+                        newKey.push(modifier);
+                    }
+                });
+                
+                if (e.altKey && !keyListenerState.pendingModifiers.some(mod => mod[0] === 56)) {
+                    newKey.push([56, 184]);
+                }
+                if (e.shiftKey && !keyListenerState.pendingModifiers.some(mod => mod[0] === 42)) {
+                    newKey.push([42, 54]);
+                }
+                if (e.ctrlKey && !keyListenerState.pendingModifiers.some(mod => mod[0] === 29)) {
+                    newKey.push([29, 157]);
+                }
+                
+                return newKey;
+                
+            } catch (error) {
+                return null;
+            }
+        }
+
+        function processMouseCombination(e, modName, varName) {
+            try {
+                const mouseMap = {
+                    0: 256,
+                    1: 258,
+                    2: 257,
+                    3: 259,
+                    4: 260
+                };
+                
+                const keyCode = mouseMap[e.button];
+                if (!keyCode) {
+                    return null;
+                }
+                
+                const newKey = [keyCode];
+                
+                if (e.altKey) newKey.push([56, 184]);
+                if (e.shiftKey) newKey.push([42, 54]);
+                if (e.ctrlKey) newKey.push([29, 157]);
+                
+                return newKey;
+                
+            } catch (error) {
+                return null;
+            }
+        }
+
+        function finishKeyListening(modName, varName, newKey) {
+            if (!keyListenerState.isListening) return;
+            
+            const mod = findMod(modName);
+            if (!mod) return;
+            
+            mod.values[varName] = newKey;
+            if (keyListenerState.currentElement) {
+                keyListenerState.currentElement.textContent = getKeyName(newKey);
+            }
+            updateResetButton(modName, varName);
+            
+            const elementToUnblock = keyListenerState.currentElement;
+            cancelKeyListening();
+            
+            if (elementToUnblock) {
+                elementToUnblock.style.pointerEvents = 'none';
+                setTimeout(() => {
+                    elementToUnblock.style.pointerEvents = '';
+                }, 200);
+            }
+            
+            saveSpecificSetting(modName, varName, newKey);
+        }
+
+        function resetToDefault(modName, varName) {
+            const mod = findMod(modName);
+            if (!mod) return;
+
+            const widget = findWidget(mod, varName);
+            if (!widget || widget.defaultValue === undefined) return;
+
+            const defaultValue = widget.defaultValue;
+            
+            mod.values[varName] = defaultValue;
+            
+            if (widget.type === 'TextInput') {
+                const textChangeKey = `${modName}_${varName}`;
+                
+                if (pendingTextChanges.hasOwnProperty(textChangeKey)) {
+                    delete pendingTextChanges[textChangeKey];
+                }
+                
+                if (originalValues[modName]) {
+                    originalValues[modName][varName] = defaultValue;
+                }
+                
+                if (Object.keys(pendingTextChanges).length === 0) {
+                    hasUnsavedTextChanges = false;
+                }
+                
+                saveSpecificSetting(modName, varName, defaultValue);
+                
+            } else {
+                if (originalValues[modName]) {
+                    originalValues[modName][varName] = defaultValue;
+                }
+                
+                saveSpecificSetting(modName, varName, defaultValue);
+            }
+
+            switch (widget.type) {
+                case 'CheckBox':
+                    const checkbox = document.getElementById(`checkbox_${modName}_${varName}`);
+                    if (checkbox) {
+                        checkbox.checked = defaultValue;
+                        const toggle = checkbox.parentElement;
+                        toggle.classList.toggle('checked', defaultValue);
+                    }
+                    break;
+                    
+                case 'Slider':
+                    const slider = document.getElementById(`slider_${modName}_${varName}`);
+                    if (slider) {
+                        slider.value = defaultValue;
+                        const valueDisplay = slider.parentElement.querySelector('.slider-value');
+                        valueDisplay.textContent = formatSliderValue(defaultValue, widget.format || '{{value}}');
+                    }
+                    break;
+                    
+                case 'Dropdown':
+                    selectDropdownItem(modName, varName, defaultValue);
+                    break;
+                    
+                case 'TextInput':
+                    const textInput = document.getElementById(`text_${modName}_${varName}`);
+                    if (textInput) {
+                        textInput.value = defaultValue;
+                        textInput.classList.remove('changed');
+                    }
+                    break;
+                    
+                case 'ColorHEX':
+                case 'ColorHEXA':
+                    const colorInput = document.getElementById(`color_${modName}_${varName}`);
+                    if (colorInput) {
+                        colorInput.value = defaultValue;
+                        colorInput.classList.remove('changed', 'invalid');
+                        const preview = colorInput.previousElementSibling.previousElementSibling;
+                        if (preview && preview.classList.contains('color-preview')) {
+                            preview.style.background = defaultValue;
+                        }
+                        const picker = document.getElementById(`color_${modName}_${varName}_picker`);
+                        if (picker) {
+                            picker.value = defaultValue.substr(0, 7);
+                        }
+                    }
+                    break;
+                    
+                case 'HotKey':
+                    const hotkeyInput = document.getElementById(`hotkey_${modName}_${varName}`);
+                    if (hotkeyInput) {
+                        hotkeyInput.textContent = getKeyName(defaultValue);
+                    }
+                    break;
+            }
+
+            updateResetButton(modName, varName);
+        }
+
+        async function saveSpecificSetting(modName, varName, value) {
+            try {
+                const specificSettings = {};
+                specificSettings[varName] = value;
+                
+                await fetch(`${API_URL}/save`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ mod: modName, values: specificSettings })
+                });
+            } catch (error) {}
+        }
+
+        function updateResetButton(modName, varName) {
+            const mod = findMod(modName);
+            if (!mod) return;
+
+            const widget = findWidget(mod, varName);
+            if (!widget || widget.defaultValue === undefined) return;
+
+            const hasValue = JSON.stringify(mod.values[varName]) !== JSON.stringify(widget.defaultValue);
+            
+            const controlGroups = document.querySelectorAll(`[data-mod-name="${modName}"] .control-group`);
+            controlGroups.forEach(group => {
+                const inputs = group.querySelectorAll(`input[id*="_${varName}"], div[id*="_${varName}"]`);
+                if (inputs.length > 0) {
+                    const resetBtn = group.querySelector('.control-reset');
+                    if (resetBtn) {
+                        resetBtn.classList.toggle('has-value', hasValue);
+                    }
+                }
+            });
+        }
+
+        async function saveAllSettings() {
+            if (!hasChanges()) return;
+            
+            setLoading(true);
+            
+            try {
+                for (const mod of modsList) {
+                    await saveSettings(mod.name, mod.values);
+                    originalValues[mod.name] = JSON.parse(JSON.stringify(mod.values));
+                }
+                
+                document.querySelectorAll('.text-input.changed, .color-input.changed').forEach(input => {
+                    input.classList.remove('changed');
+                });
+                
+                hasUnsavedTextChanges = false;
+                pendingTextChanges = {};
+                
+                updateSaveIndicator();
+                
+                const indicator = document.getElementById('saveIndicator');
+                const text = indicator.querySelector('span');
+                text.textContent = '{{ web_saved }}';
+                
+                setTimeout(() => {
+                    text.textContent = '{{ gui_button{{ gui_buttonApply }} }}';
+                }, 2000);
+                
+            } catch (error) {
+                alert('{{ web_saveError }}');
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        async function init() {
+            try {
+                modsList = await fetchConfig();
+                
+                const container = document.getElementById('modsList');
+                container.innerHTML = '';
+                
+                let firstValidMod = null;
+                
+                modsList.forEach(mod => {
+                    try {
+                        const modItem = createModItem(mod);
+                        container.appendChild(modItem);
+                        
+                        if (!firstValidMod && mod.template && (mod.template.column1 || mod.template.column2)) {
+                            firstValidMod = mod.name;
+                        }
+                    } catch (error) {
+                        const errorItem = document.createElement('div');
+                        errorItem.className = 'mod-item error disabled';
+                        errorItem.innerHTML = `
+                            <div class="mod-header">
+                                <div class="mod-toggle"></div>
+                                <div class="mod-info">
+                                    <div class="mod-name">${mod.name || 'Unknown Mod'}</div>
+                                </div>
+                            </div>
+                        `;
+                        container.appendChild(errorItem);
+                    }
+                });
+                
+
+                
+                document.addEventListener('click', (e) => {
+                    if (!e.target.closest('.dropdown')) {
+                        document.querySelectorAll('.dropdown').forEach(d => {
+                            d.classList.remove('open', 'dropup');
+                            
+                            const modItem = d.closest('.mod-item');
+                            if (modItem && modItem.classList.contains('active')) {
+                                const settings = modItem.querySelector('.mod-settings');
+                                settings.style.maxHeight = '2000px';
+                            }
+                        });
+                    }
+                    
+                    if (keyListenerState.isListening && !e.target.closest('.hotkey-control')) {
+                        cancelKeyListening();
+                    }
+                });
+                
+                document.addEventListener('contextmenu', (e) => {
+                    if (Date.now() < keyListenerState.blockContextMenuUntil || keyListenerState.isListening) {
+                        e.preventDefault();
+                        return false;
+                    }
+                });
+                
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && keyListenerState.isListening) {
+                        preventEvent(e);
+                        cancelKeyListening();
+                        return false;
+                    }
+                    
+                    if (keyListenerState.isListening) return;
+                    
+                    if (e.ctrlKey && ['c', 'v', 'x', 'a'].includes(e.key.toLowerCase())) {
+                        return true;
+                    }
+                    
+                    if (e.ctrlKey && e.key === 's') {
+                        e.preventDefault();
+                        saveAllSettings();
+                    }
+                    
+                    if (e.key === 'Escape') {
+                        document.querySelectorAll('.dropdown.open').forEach(d => {
+                            d.classList.remove('open', 'dropup');
+                        });
+                    }
+                });
+                
+            } catch (error) {
+                const container = document.getElementById('modsList');
+                container.innerHTML = `
+                    <div class="mod-item error" style="padding: 40px; text-align: center;">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="${getComputedStyle(document.body).getPropertyValue('--danger')}">
+                            <path d="M12 2L1 21h22L12 2zm0 3.5L19.5 19h-15L12 5.5zM11 16v2h2v-2h-2zm0-6v4h2v-4h-2z"/>
+                        </svg>
+                        <div style="margin-top: 16px; color: var(--text-secondary);">
+                            Failed to load mod settings. Check console for details.
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+    </script>
+</body>
+</html>

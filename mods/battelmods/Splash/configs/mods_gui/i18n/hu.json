@@ -1,0 +1,12 @@
+﻿{
+  "gui_name": "MODOK - Beállítások",
+  "gui_windowTitle": "Modok beállításai",
+  "gui_buttonOK": "OK",
+  "gui_buttonCancel": "Mégse",
+  "gui_buttonApply": "Alkalmaz",
+  "gui_enableButtonTooltip": "{HEADER}Modok beállításai{/HEADER}{BODY}Modok engedélyezése | letiltása és beállításainak módosítása{/BODY}",
+  "web_resetToDefault": "Visszaállítás alapértelmezettre:",
+  "web_saved": "Mentve!",
+  "web_saveError": "Hiba a beállítások mentésekor. Részletek a konzolban.",
+  "version": 307
+}
