@@ -159,8 +159,7 @@
       "author": "Various",
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/battelmods/Splash/artySplash.jpg",
       "files": [
-        { "folderUrl": "mods/battelmods/Splash/configs/spoter", "dest": "mods", "folder": "spoter" },
-        { "folderUrl": "mods/battelmods/Splash/configs/mods_gui", "dest": "mods", "folder": "configs" }
+        { "folderUrl": "mods/battelmods/Splash/mods", "dest": "mods", "folder": "" }
       ]
     },
     {
