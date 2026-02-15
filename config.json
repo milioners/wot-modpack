@@ -110,8 +110,8 @@
 	  "category": "Прицелы",
 	  "author": "Andre_V",
 	  "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/Oreshkina/SightOreshkina.jpg",
-	  "files": [
-		{ "folderUrl": "mods/crosshair/Oreshkina", "dest": "mods", "folder": "" },
+      "files": [
+		{ "folderUrl": "mods/crosshair/Oreshkina", "dest": "mods", "folder": "" }
 	  ]
 	},
 	{
