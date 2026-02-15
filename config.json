@@ -89,6 +89,19 @@
 
       ]
     },
+	{
+      "id": "Zayaz-crosshair-full",
+      "title": { "ru": "Zayaz прицел" },
+      "description": { "ru": "Полный набор Zayaz прицела: аркадный, снайперский, САУ, Штурм САУ и сведение в одном моде. Установите один раз — все." },
+      "category": "Прицелы",
+      "author": "Andre_V",
+      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/crosshair/Zayaz/Sightzayaz.jpg",
+      "files": [
+        { "folderUrl": "mods/crosshair/Zayaz", "dest": "mods", "folder": "" },
+        { "folderUrl": "mods/crosshair/Zayaz/configs", "dest": "mods", "folder": "configs" }
+
+      ]
+    },
     {
       "id": "DamagePanel-PS",
       "title": { "ru": "Панель повреждений Playstation" },
