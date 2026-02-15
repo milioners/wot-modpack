@@ -1,7 +1,7 @@
 {
   "targetClient": "Lesta",
   "gameVersion": "1.40",
-  "gameVersionWg": "2.1.1"
+  "gameVersionWg": "2.1.1",
   "crosshairApi": {
     "url": "https://raw.githubusercontent.com/milioners/wot-modpack/main/mods/crosshair/crosshairs_api_1.1.mtmod"
   },
