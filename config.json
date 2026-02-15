@@ -126,22 +126,6 @@
 		{ "folderUrl": "mods/crosshair/Jove/configs", "dest": "mods", "folder": "configs" }
 	  ]
 	},
-	
-	
-	{
-      "id": "Splash-ART",
-      "title": { "ru": "Фугасный Сплеш" },
-      "description": { "ru": "Фугасный Сплеш." },
-      "category": "Боевые моды",
-      "author": "Spoter",
-      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/battelmods/Splash/artySplash.jpg",
-      "files": [
-        { "folderUrl": "mods/battelmods/Splash", "dest": "mods", "folder": "" },
-        { "folderUrl": "mods/battelmods/Splash/configs", "dest": "mods", "folder": "configs" }
-      ]
-    },
-	
-	
     {
       "id": "DamagePanel-PS",
       "title": { "ru": "Панель повреждений Playstation" },
@@ -165,6 +149,18 @@
         { "url": "mods/damagpanel/DamagPanelUGN/phantasm.damage_log.mtmod", "dest": "mods", "folder": "" },
         { "url": "mods/damagpanel/DamagPanelUGN/damagePanel.mtmod", "dest": "mods", "folder": "" },
         { "folderUrl": "mods/damagpanel/configs", "dest": "mods", "folder": "configs" }
+      ]
+    },
+    {
+      "id": "Splash-arty",
+      "title": { "ru": "HE Splash (сфера разлёта ОФ)" },
+      "description": { "ru": "Показ сферы разлёта фугасного снаряда для арты. Требует папку spoter в папке версии игры." },
+      "category": "Геймплей",
+      "author": "Various",
+      "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/placeholder.svg",
+      "files": [
+        { "folderUrl": "mods/battelmods/Splash/configs/spoter", "dest": "mods", "folder": "spoter" },
+        { "folderUrl": "mods/battelmods/Splash/configs/mods_gui", "dest": "mods", "folder": "configs" }
       ]
     },
     {
