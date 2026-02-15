@@ -154,12 +154,12 @@
     {
       "id": "Splash-arty",
       "title": { "ru": "HE Splash (сфера разлёта ОФ)" },
-      "description": { "ru": "Показ сферы разлёта фугасного снаряда для арты. Требует папку spoter в папке версии игры." },
-      "category": "Геймплей",
-      "author": "Various",
+      "description": { "ru": "Показ сферы разлёта фугасного снаряда для арты." },
+      "category": "Боевые моды",
+      "author": "Spoter",
       "image": "https://raw.githubusercontent.com/milioners/wot-modpack/main/images/battelmods/Splash/artySplash.jpg",
       "files": [
-        { "folderUrl": "mods/battelmods/Splash/mods", "dest": "mods", "folder": "" }
+        { "folderUrl": "mods/battelmods/Splash/mods/", "dest": "mods", "folder": "" }
       ]
     },
     {
